@@ -1,0 +1,79 @@
+<template>
+    <ion-page>
+        <ion-content>
+            <div v-if="intro <= 2" class="grid grid-cols-1 text-center items-center justify-items-center min-h-screen">
+                <div class="w-3/4 p-4">
+                    <div :class="{'opacity-0 invisible h-0': intro !== 1, 'opacity-1 visible': intro === 1}" class="transition-all">
+                        <div class="tooltip tooltip-open tooltip-top tooltip-primary" data-tip="Hai, Aku dokter Sio !">
+                            <img src="assets/sio.svg" alt="sio" class="w-full">
+                        </div>
+                        <div class="fixed bottom-0 left-0 p-6 w-full">
+                            <button @click="intro += 1" class="btn btn-primary w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-indigo-800">Lanjutkan</button>
+                        </div>
+                    </div>
+                    <div :class="{'opacity-0 invisible h-0': intro !== 2, 'opacity-1 visible': intro === 2}" class="transition-all">
+                        <div class="tooltip tooltip-open tooltip-top tooltip-primary" data-tip="Ayo mulai belajarnya !">
+                            <img src="assets/sio smart.svg" alt="sio" class="w-full">
+                        </div>
+                        <div class="fixed bottom-0 left-0 p-6 w-full">
+                            <button @click="intro += 1" class="btn btn-primary w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-indigo-800">Lanjutkan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div v-else>
+                <div class="w-full p-4 flex">
+                    <div>
+                        <button class="btn btn-ghost">
+                            <Icon icon="material-symbols:chevron-left-rounded" class="text-2xl"/>
+                        </button>
+                    </div>
+                    <div>
+                        <progress class="progress progress-primary w-56" value="10" max="100"></progress>
+                    </div>
+                </div>
+                <div :class="{'opacity-0 invisible h-0': intro !== 3, 'opacity-1 visible': intro === 3}" class="transition-all">
+                    <div class="tooltip tooltip-open tooltip-top tooltip-primary" data-tip="Nama kamu siapa ?">
+                        <img src="assets/sio face.svg" alt="sio" class="w-full">
+                    </div>
+                    <div class="fixed bottom-0 left-0 p-6 w-full">
+                        <button :disabled="user.name === null" @click="intro += 1" :class="{'shadow-indigo-800': user.name !== null, 'shadow-gray-400': user.name === null}" class="btn btn-primary w-full rounded-xl shadow-[0px_2px_0px_3px]">Lanjutkan</button>
+                    </div>
+                </div>
+            </div>
+        </ion-content>
+    </ion-page>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { Icon } from '@iconify/vue';
+
+export default defineComponent({
+    components: {
+        Icon,
+    },
+    data() {
+        return {
+            intro: 1,
+            user: {
+                name: null,
+                class: null,
+            }
+        }
+    }
+})
+</script>
+
+<style scoped>
+.tooltip {
+    --tooltip-tail: 6px !important;
+}
+.tooltip::before {
+    border-radius: 0.75rem !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+</style>
