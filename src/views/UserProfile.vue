@@ -2,7 +2,7 @@
     <app-layout>
         <template v-slot:content>
             <div class="min-h-screen bg-base-200 w-full">
-                <div class="relative p-3 border-b-2 border-gray-300 pr-8 w-full h-16 flex items-center justify-between justify-items-between">
+                <div class="relative pt-5 p-3 border-b-2 border-gray-300 pr-8 w-full h-16 flex items-center justify-between justify-items-between">
                     <div>
                         <button class="btn btn-ghost">
                             <Icon icon="cil:cog" class="text-3xl text-primary"/>
@@ -27,14 +27,14 @@
                 </div>
                 <div class="flex gap-5 px-6 pb-6 border-b-2 border-gray-300">
                     <div>
-                        <button  class="btn bg-gray-200 text-gray-600 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-gray-400">
-                            <img src="/assets/flags/indonesia.png" class="w-8" alt="">
-                        </button>
+                        <label for="modal-language" class="btn bg-gray-200 text-gray-600 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-gray-400">
+                            <img :src="`/assets/flags/${user.country}.png`" class="w-8 rounded-lg" alt="">
+                        </label>
                     </div>
                     <div class="grow">
-                        <button  class="btn bg-red-500 text-white w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-red-700">
+                        <label for="modal-logout"  class="btn bg-red-500 text-white w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-red-700">
                             Keluar
-                        </button>
+                        </label>
                     </div>
                 </div>
                 <div class="p-6">
@@ -57,7 +57,7 @@
                                     <img src="/assets/icons/gem.png" class="w-7" alt="fire">
                                 </div>
                                 <div>
-                                    <h5 class="m-0 text-2xl font-bold">{{ user.condition.gems }} Hari</h5>
+                                    <h5 class="m-0 text-2xl font-bold">{{ user.condition.gems }} Gem</h5>
                                     <p class="mb-0">Kumpulkan banyak gem</p>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@
                                     <img src="/assets/icons/heart.png" class="w-7" alt="fire">
                                 </div>
                                 <div>
-                                    <h5 class="m-0 text-2xl font-bold">{{ user.condition.lives }} Hari</h5>
+                                    <h5 class="m-0 text-2xl font-bold">{{ user.condition.lives }} Hati</h5>
                                     <p class="mb-0">Jaga hatimu, tetap belajar</p>
                                 </div>
                             </div>
@@ -76,6 +76,22 @@
                     </div>
                 </div>
             </div>
+            <input type="checkbox" id="modal-logout" class="modal-toggle" />
+            <label for="modal-logout" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
+                <label class="modal-box relative" for="">
+                    <img src="/assets/icons/sad.png" alt="Sad emoji" class="w-12">
+                    <h3 class="text-lg font-bold">Yakin Logout ?</h3>
+                    <p class="mb-6">Ketika kamu logout, maka game ini akan start dari awal lagi ketika kamu kembali.</p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label for="modal-logout" class="btn mt-3 bg-gray-200 text-gray-600 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-gray-400">
+                            Tidak jadi
+                        </label>
+                        <button @click="onLogout()" class="btn mt-3 bg-red-500 text-white w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-red-700">
+                            Ya, Saya keluar
+                        </button>
+                    </div>
+                </label>
+            </label>
         </template>
     </app-layout>
 </template>
@@ -99,6 +115,13 @@ export default defineComponent({
             this.user = JSON.parse(itemsString);
         }
     },
+    methods: {
+        onLogout() {
+            document.getElementById('modal-logout')?.click()
+            localStorage.removeItem('user')
+            this.$router.push({name: 'StartPage'})
+        },
+    }
 })
 </script>
 

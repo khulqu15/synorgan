@@ -2,7 +2,7 @@
     <ion-page>
         <ion-content offset-bottom="0" class="custom-content" background="bg-indigo-600" :padding="false">
             <div class="relative">
-                <slot name="content"></slot>
+                <slot name="content" :key="`content-${user.country}`"></slot>
                 <top-navigation :class="{'hidden': $route.name !== 'DashboardPage'}" :key="user.country"/>
                 <bottom-navigation/>
 
@@ -55,8 +55,8 @@
                                 <h6 class="text-green-700 font-bold text-xl">{{ user.condition.gems }}</h6>
                             </div>
                         </div>
-                        <div class="flex justify-center">
-                            <div v-for="(heart, index) in user.condition.lives" :key="`lang-${index}`"> 
+                        <div v-if="user.condition.lives > 0" class="flex justify-center">
+                            <div v-for="(heart, index) in user.condition.lives" :key="`lives-${index}`"> 
                                 <img src="/assets/icons/heart.png" class="w-10" alt="">
                             </div>
                         </div>

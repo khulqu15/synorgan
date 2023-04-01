@@ -8,6 +8,12 @@ import DashboardPage from '../views/DashboardPage.vue'
 import StorePage from '../views/StorePage.vue'
 import OverviewPage from '../views/OverviewPage.vue'
 import UserProfile from '../views/UserProfile.vue'
+import DeveloperPage from '../views/DeveloperPage.vue'
+import GameTheory from '../views/game/GameTheory.vue'
+import GameQuiz from '../views/game/GameQuiz.vue'
+import GameReward from '../views/game/GameReward.vue'
+import GiftPage from '../views/GiftPage.vue'
+import NotificationPage from '../views/NotificationPage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -46,10 +52,44 @@ const routes: Array<RouteRecordRaw> = [
     component: OverviewPage
   },
   {
+    path: '/gifts',
+    name: 'GiftPage',
+    component: GiftPage
+  },
+  {
     path: '/user-profile',
     name: 'UserProfile',
     component: UserProfile
-  }
+  },
+  {
+    path: '/developer',
+    name: 'DeveloperPage',
+    component: DeveloperPage
+  },
+  {
+    path: '/theory/:id',
+    name: 'GameTheory',
+    component: GameTheory,
+    props: (route) => ({ myData: route.params.myData }),
+  },
+  {
+    path: '/quiz/:id',
+    name: 'GameQuiz',
+    component: GameQuiz,
+    props: true,
+  },
+  {
+    path: '/reward/:id',
+    name: 'GameReward',
+    component: GameReward,
+    props: true,
+  },
+  {
+    path: '/notification',
+    name: 'NotificationPage',
+    component: NotificationPage,
+    props: true,
+  },
 ]
 
 const router = createRouter({

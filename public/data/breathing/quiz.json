@@ -1,0 +1,157 @@
+[
+    {
+        "image": "alveoli1.jpg",
+        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Kita dianjurkan untuk menghindari makanan dan minuman yang dingin, karena…</h6></div>",
+        "answers": [
+            {
+                "option": "Jaringan paru –paru sensitif terhadap dingin",
+                "is_true": true
+            },
+            {
+                "option": "Dingin dapat menyehatkan",
+                "is_true": false
+            },
+            {
+                "option": "Jaringan paru-paru senang dengan dingin",
+                "is_true": false
+            },
+            {
+                "option": "Karena harga minuman dan makanan dingin mahal",
+                "is_true": false
+            }
+        ]
+    },
+    {
+        "image": "alveoli2.jpg",
+        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Dibawah ini yang termasuk cara memelihara organ pernapasan, kecuali…</h6></div>",
+        "answers": [
+            {
+                "option": "Makan makanan yang bergizi",
+                "is_true": false
+            },
+            {
+                "option": "Menghindari asap rokok",
+                "is_true": false
+            },
+            {
+                "option": "Tidak menggunakan masker saat berada di lingkungan yang kotor",
+                "is_true": true
+            },
+            {
+                "option": "Menanam tanaman hijau di lingkungan rumah",
+                "is_true": false
+            }
+        ]
+    },
+    {
+        "image": "alveoli3.jpg",
+        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Posisi tidur yang benar adalah…</h6></div>",
+        "answers": [
+            {
+                "option": "Tengkurap",
+                "is_true": false
+            },
+            {
+                "option": "Miring ke kanan dan tidak telengkup",
+                "is_true": true
+            },
+            {
+                "option": "Terlentang",
+                "is_true": false
+            },
+            {
+                "option": "Miring ke kiri",
+                "is_true": false
+            }
+        ]
+    },
+    {
+        "image": "alveoli4.jpg",
+        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Ada beberapa cara untuk merawat organ pernapasan salah satunya yaitu memperhatikan lingkungan tempat tinggal dengan cara…</h6></div>",
+        "answers": [
+            {
+                "option": "Meletakkan sampah didepan rumah",
+                "is_true": false
+            },
+            {
+                "option": "Tidak membersihkan halaman rumah",
+                "is_true": false
+            },
+            {
+                "option": "Menata tumbuhan dengan suka – suka",
+                "is_true": false
+            },
+            {
+                "option": "Menanam tumbuhan hijau dengan menata secara rapi",
+                "is_true": true
+            }
+        ]
+    },
+    {
+        "image": "alveoli5.jpg",
+        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Cara benar membersihkan hidung dengan benar yaitu dengan…</h6></div>",
+        "answers": [
+            {
+                "option": "Mengkorek hingga kedalam",
+                "is_true": false
+            },
+            {
+                "option": "Membersihkan secara halus hingga bulu hidung",
+                "is_true": true
+            },
+            {
+                "option": "Menggunakan alat yang keras agar segera keluar kotoran yang ada",
+                "is_true": false
+            },
+            {
+                "option": "Langsung memasukkan jari tangan tanpa cuci tangan",
+                "is_true": false
+            }
+        ]
+    },
+    {
+        "image": "alveoli6.jpg",
+        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Selain menghindari makanan dan minuman dingin, kita juga harus menghindari makanan dan minuman yang banyak mengandung…</h6></div>",
+        "answers": [
+            {
+                "option": "Garam",
+                "is_true": false
+            },
+            {
+                "option": "Ikan dan sayur",
+                "is_true": false
+            },
+            {
+                "option": "Gula",
+                "is_true": true
+            },
+            {
+                "option": "Asam",
+                "is_true": false
+            }
+        ]
+    },
+    {
+        "image": "alveoli7.jpg",
+        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Tidak merokok dan menghindari asap rokok adalah salah satu merawat organ pernpasan, sebab keduanya banyak mengandung…</h6></div>",
+        "answers": [
+            {
+                "option": "Tembakau",
+                "is_true": true
+            },
+            {
+                "option": "Kertas",
+                "is_true": false
+            },
+            {
+                "option": "Filter",
+                "is_true": false
+            },
+            {
+                "option": "Racun",
+                "is_true": false
+            }
+        ]
+    }
+]
+

@@ -10,24 +10,24 @@
                 <div class="grow">
                     <label for="modal-active" class="btn btn-ghost">
                         <div class="flex items-center gap-2">
-                            <img src="assets/icons/hot-sale.png" class="w-8" alt="">
-                            <h4 class="m-0 text-gray-600 font-bold">{{ user.condition.active_count }}</h4>
+                            <img src="assets/icons/hot-sale.png" class="w-6" alt="">
+                            <h6 class="m-0 text-gray-600 font-bold">{{ user.condition.active_count }}</h6>
                         </div>
                     </label>
                 </div>
                 <div class="grow">
                     <button @click="gotoPage($event, 'StorePage')" class="btn btn-ghost">
                         <div class="flex items-center gap-2">
-                            <img src="assets/icons/gem.png" class="w-8" alt="">
-                            <h4 class="m-0 text-gray-600 font-bold">{{ user.condition.gems }}</h4>
+                            <img src="assets/icons/gem.png" class="w-6" alt="">
+                            <h6 class="m-0 text-gray-600 font-bold">{{ user.condition.gems }}</h6>
                         </div>
                     </button>
                 </div>
                 <div class="grow">
                     <label for="modal-heart" class="btn btn-ghost">
                         <div class="flex items-center gap-2">
-                            <img src="assets/icons/heart.png" class="w-8" alt="">
-                            <h4 class="m-0 text-gray-600 font-bold">{{ user.condition.lives }}</h4>
+                            <img src="assets/icons/heart.png" class="w-6" alt="">
+                            <h6 class="m-0 text-gray-600 font-bold">{{ user.condition.lives }}</h6>
                         </div>
                     </label>
                 </div>

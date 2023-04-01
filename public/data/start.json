@@ -1,0 +1,104 @@
+[
+    {
+       "name":"Mempelajari Hidung",
+       "type":"theory",
+       "image":"theory_current.png",
+       "description":"Ayo belajar tentang fungsi hidung manusia",
+       "is_open":true,
+       "link":"GameTheory",
+       "is_done":false,
+       "id":1
+    },
+    {
+       "name":"Quiz Hidung",
+       "type":"quiz",
+       "image":"lock.png",
+       "description":"Mengerjakan quiz soal hidung manusia",
+       "is_open":false,
+       "link":"GameQuiz",
+       "is_done":false,
+       "id":1
+    },
+    {
+       "name":"Reward Pertama Kamu",
+       "type":"reward",
+       "image":"reward.png",
+       "description":"Ayo belajar tentang fungsi hidung manusia !",
+       "is_open":false,
+       "link":"Reward",
+       "is_done":false,
+       "id":1
+    },
+    {
+       "name":"Pelajari Faring",
+       "type":"theory",
+       "image":"theory.png",
+       "description":"Ayo belajar tentang fungsi hidung manusia !",
+       "is_open":false,
+       "is_done":false
+    },
+    {
+       "name":"Quiz Faring",
+       "type":"quiz",
+       "image":"lock.png",
+       "description":"Ayo belajar tentang fungsi hidung manusia !",
+       "is_open":false,
+       "is_done":false
+    },
+    {
+       "name":"Hadiah Untuk Kamu",
+       "type":"reward",
+       "image":"reward.png",
+       "description":"Ayo belajar tentang fungsi hidung manusia !",
+       "is_open":false,
+       "is_done":false
+    },
+    {
+       "name":"Pelajari Faring",
+       "type":"theory",
+       "image":"theory.png",
+       "description":"Ayo belajar tentang fungsi hidung manusia !",
+       "is_open":false,
+       "is_done":false
+    },
+    {
+       "name":"Quiz Faring",
+       "type":"quiz",
+       "image":"lock.png",
+       "description":"Ayo belajar tentang fungsi hidung manusia !",
+       "is_open":false,
+       "is_done":false
+    },
+    {
+       "name":"Hadiah Untuk Kamu",
+       "type":"reward",
+       "image":"reward.png",
+       "description":"Ayo belajar tentang fungsi hidung manusia !",
+       "is_open":false,
+       "is_done":false
+    },
+    {
+       "name":"Pelajari Hidung",
+       "type":"theory",
+       "image":"training.png",
+       "description":"Ayo belajar tentang fungsi hidung manusia",
+       "is_open":false,
+       "is_done":false
+    },
+    {
+       "name":"Quiz Hidung",
+       "type":"quiz",
+       "image":"training.png",
+       "description":"Mengerjakan quiz soal hidung manusia",
+       "is_open":false,
+       "is_done":false
+    },
+    {
+       "name":"Reward Pertama Kamu",
+       "type":"reward",
+       "image":"gift.png",
+       "description":"Ayo belajar tentang fungsi hidung manusia !",
+       "is_open":false,
+       "is_done":false
+    }
+ ]

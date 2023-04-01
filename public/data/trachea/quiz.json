@@ -1,0 +1,90 @@
+[
+    {
+        "image": "trachea1.png",
+        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Trakea disebut pula bagian ...</h6></div>",
+        "answers": [
+            {
+                "option": "Batang tenggorokan",
+                "is_true": true
+            },
+            {
+                "option": "Percabangan tenggorokan",
+                "is_true": false
+            },
+            {
+                "option": "Ujung tenggorokan",
+                "is_true": false
+            },
+            {
+                "option": "Persimpangan tenggorokan",
+                "is_true": false
+            }
+        ]
+    },
+    {
+        "image": "trachea2.png",
+        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Pada trakea terdapat 3 lapisan, salah satunya lapisan bagian tengah yang terdiri dari ...</h6></div>",
+        "answers": [
+            {
+                "option": "Lapisan ikat",
+                "is_true": false
+            },
+            {
+                "option": "Otot polos dan cincin tulang rawan",
+                "is_true": true
+            },
+            {
+                "option": "Otot kuat dan otot lurik",
+                "is_true": false
+            },
+            {
+                "option": "Otot urat",
+                "is_true": false
+            }
+        ]
+    },
+    {
+        "image": "trachea3.png",
+        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Trakea memiliki jaringan yang sama nama dan fungsi seperti jaringan yang ada pada hidung. Jaringan ini berfungsi untuk menyaring debu dan kotoran. Jaringan dengan ciri-ciri seperti diatas disebut ...</h6></div>",
+        "answers": [
+            {
+                "option": "Epitel",
+                "is_true": false
+            },
+            {
+                "option": "Epiglotis",
+                "is_true": false
+            },
+            {
+                "option": "Silia",
+                "is_true": true
+            },
+            {
+                "option": "Saraf",
+                "is_true": false
+            }
+        ]
+    },
+    {
+        "image": "trachea4.png",
+        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Percabangan pada trakea menuju ke ...</h6></div>",
+        "answers": [
+            {
+                "option": "Lambung",
+                "is_true": false
+            },
+            {
+                "option": "Ginjal",
+                "is_true": false
+            },
+            {
+                "option": "Faring",
+                "is_true": false
+            },
+            {
+                "option": "Paru – paru",
+                "is_true": true
+            }
+        ]
+    }
+]

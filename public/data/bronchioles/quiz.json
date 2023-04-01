@@ -1,0 +1,112 @@
+[
+    {
+        "image": "bronchioles1.jpg",
+        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Sebagai penyalur udari yang berasal dari bronkus menuju ke alveoli dan mengontrol jumlah udara yang masuk dan keluar saat proses bernapas, pernyata tersebut merupakan … dari bronkiolus.</h6></div>",
+        "answers": [
+            {
+                "option": "Letak",
+                "is_true": false
+            },
+            {
+                "option": "Fungsi",
+                "is_true": true
+            },
+            {
+                "option": "Penyakit",
+                "is_true": false
+            },
+            {
+                "option": "Gangguan",
+                "is_true": false
+            }
+        ]
+    },
+    {
+        "image": "bronchioles2.jpg",
+        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Percabangan dengan ukuran yang semakin kecil dari bronkus, organ yang dimaksud adalah ….</h6></div>",
+        "answers": [
+            {
+                "option": "Bronkiolus",
+                "is_true": true
+            },
+            {
+                "option": "Laring",
+                "is_true": false
+            },
+            {
+                "option": "Faring",
+                "is_true": false
+            },
+            {
+                "option": "Trakea",
+                "is_true": false
+            }
+        ]
+    },
+    {
+        "image": "bronchioles3.jpg",
+        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Letak bronkus terdapat pada ….</h6></div>",
+        "answers": [
+            {
+                "option": "Jantung",
+                "is_true": false
+            },
+            {
+                "option": "Pipa saluran",
+                "is_true": false
+            },
+            {
+                "option": "Paru – paru kanan dan kiri",
+                "is_true": true
+            },
+            {
+                "option": "Dinding bronkus",
+                "is_true": false
+            }
+        ]
+    },
+    {
+        "image": "bronchioles4.jpg",
+        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Sinusitis merupakan salah satu penyakit yang menyerang organ pernapasan manusia, tepatnya pada organ ….</h6></div>",
+        "answers": [
+            {
+                "option": "Bronkus",
+                "is_true": false
+            },
+            {
+                "option": "Faring",
+                "is_true": true
+            },
+            {
+                "option": "Laring",
+                "is_true": false
+            },
+            {
+                "option": "Bronkiolus",
+                "is_true": false
+            }
+        ]
+    },
+    {
+        "image": "bronchioles5.jpg",
+        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Gangguan penyakit yang terjadi pada bronkiolus, kecuali ….</h6></div>",
+        "answers": [
+            {
+                "option": "Mengi",
+                "is_true": false
+            },
+            {
+                "option": "Batuk berdahak",
+                "is_true": false
+            },
+            {
+                "option": "Sinusitis",
+                "is_true": true
+            },
+            {
+                "option": "Influenza",
+                "is_true": false
+            }
+        ]
+    }
+]    

@@ -8,8 +8,9 @@
                     </button>
                 </div>
                 <div class="grow">
-                    <button class="btn btn-ghost">
-                        <img src="assets/icons/gift-discount.png" class="w-8" alt="">
+                    <button @click="$router.push({name: 'GiftPage'})" class="btn btn-ghost relative">
+                        <div v-if="available.gift" class="absolute w-3 h-3 bg-red-600 rounded-xl top-3 right-4"></div>
+                        <img src="assets/icons/gift-box.png" class="w-8" alt="">
                     </button>
                 </div>
                 <div class="grow">
@@ -18,12 +19,12 @@
                     </button>
                 </div>
                 <div class="grow">
-                    <button class="btn btn-ghost">
+                    <button @click="$router.push({name: 'NotificationPage'})" class="btn btn-ghost">
                         <img src="assets/icons/no_notification.png" class="w-8" alt="">
                     </button>
                 </div>
                  <div class="grow">
-                    <button class="btn btn-ghost">
+                    <button @click="$router.push({name: 'DeveloperPage'})" class="btn btn-ghost">
                         <img src="assets/icons/shield.png" class="w-8" alt="">
                     </button>
                 </div>
@@ -31,3 +32,27 @@
         </div>
     </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+    data() {
+        return {
+            available: {
+                gift: false
+            }
+        }
+    },
+    created() {
+        this.syncData()
+    },
+    methods: {
+        syncData() {
+            const gameGift = JSON.parse(localStorage.getItem("game_gift") as string)
+            if(gameGift && gameGift.length > 0) this.available.gift = true
+            else this.available.gift = false
+        }
+    }
+})
+</script>
