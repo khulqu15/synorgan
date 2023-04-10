@@ -28,33 +28,55 @@
                             </label>
                         </div>
                     </div>
-                    <input type="checkbox" id="modal-start" class="modal-toggle" />
-                    <label v-if="levels[selectedLevel]" for="modal-start" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
-                        <label class="modal-box relative bg-primary" for="">
-                            <div class="text-white">
-                                <h3 class="text-lg font-bold">{{ levels[selectedLevel].name }}</h3>
-                                <p class="mb-4">{{ levels[selectedLevel].description }}</p>
-                            </div>
-                            <button @click="readyToStudy(levels[selectedLevel])" for="modal-start" class="btn mt-3 bg-gray-200 text-gray-600 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-gray-400">
-                                Ayo Mulai
-                            </button>
-                            <label for="modal-start" class="btn mt-3 bg-primary w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-indigo-800">
-                                Tidak jadi
+                    <div v-if="user.condition.lives > 0">
+                        <input type="checkbox" id="modal-start" class="modal-toggle" />
+                        <label v-if="levels[selectedLevel]" for="modal-start" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
+                            <label class="modal-box relative bg-primary" for="">
+                                <div class="text-white">
+                                    <h3 class="text-lg font-bold">{{ levels[selectedLevel].name }}</h3>
+                                    <p class="mb-4">{{ levels[selectedLevel].description }}</p>
+                                </div>
+                                <button @click="readyToStudy(levels[selectedLevel])" for="modal-start" class="btn mt-3 bg-gray-200 text-gray-600 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-gray-400">
+                                    Ayo Mulai
+                                </button>
+                                <label for="modal-start" class="btn mt-3 bg-primary w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-indigo-800">
+                                    Tidak jadi
+                                </label>
                             </label>
                         </label>
-                    </label>
-                    <input type="checkbox" id="modal-danger" class="modal-toggle" />
-                    <label for="modal-danger" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
-                        <label class="modal-box relative bg-red-500" for="">
-                            <div class="text-white">
-                                <h3 class="text-lg font-bold">Kamu tidak boleh melompat.</h3>
-                                <p class="mb-4">Belajar sedikit demi sedikit akan lebih baik.</p>
-                            </div>
-                            <label for="modal-danger" class="btn mt-3 bg-red-500 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-red-800">
-                                Baik
+                        <input type="checkbox" id="modal-danger" class="modal-toggle" />
+                        <label for="modal-danger" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
+                            <label class="modal-box relative bg-red-500" for="">
+                                <div class="text-white">
+                                    <h3 class="text-lg font-bold">Kamu tidak boleh melompat.</h3>
+                                    <p class="mb-4">Belajar sedikit demi sedikit akan lebih baik.</p>
+                                </div>
+                                <label for="modal-danger" class="btn mt-3 bg-red-500 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-red-800">
+                                    Baik
+                                </label>
                             </label>
                         </label>
-                    </label>
+                    </div>
+                    <div v-else>
+                        <input type="checkbox" id="modal-start" class="modal-toggle" />
+                        <label v-if="levels[selectedLevel]" for="modal-start" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
+                            <label class="modal-box relative bg-red-500" for="">
+                                <div class="text-white">
+                                    <h3 class="text-lg font-bold">Maaf, kamu tidak bisa lanjut </h3>
+                                    <p class="mb-4">karena nyawa atau hatimu telah habis, tunggu beberapa jam untuk lanjut</p>
+                                </div>
+                            </label>
+                        </label>
+                        <input type="checkbox" id="modal-danger" class="modal-toggle" />
+                        <label v-if="levels[selectedLevel]" for="modal-danger" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
+                            <label class="modal-box relative bg-red-500" for="">
+                                <div class="text-white">
+                                    <h3 class="text-lg font-bold">Maaf, kamu tidak bisa lanjut </h3>
+                                    <p class="mb-4">karena nyawa atau hatimu telah habis, tunggu beberapa jam untuk lanjut</p>
+                                </div>
+                            </label>
+                        </label>
+                    </div>
                 </div>
             </div>
         </template>
@@ -94,6 +116,10 @@ export default defineComponent({
   },
   created() {
     this.syncData()
+    const itemsString = localStorage.getItem('user');
+    if (itemsString) {
+        this.user = JSON.parse(itemsString);
+    }
   },
   methods: {
     syncData() {
@@ -112,6 +138,9 @@ export default defineComponent({
   data() {
     return {
       current_state: 0,
+      user: {
+
+      },
       levels: [
         { name: 'Mempelajari Hidung', type: 'theory', icon: 'book.png', image: 'theory_current.png', description: 'Ayo belajar tentang fungsi hidung manusia', is_open: true, link: "GameTheory", is_done: false, id: 1},
         { name: 'Quiz Hidung', type: 'quiz', icon: 'question.png',  image: 'lock.png', description: 'Mengerjakan quiz soal hidung manusia', is_open: false, link: "GameQuiz", is_done: false, id: 1,},

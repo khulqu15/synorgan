@@ -75,7 +75,7 @@
             },
             {
                 "option": "Faring",
-                "is_true": true
+                "is_true": false
             },
             {
                 "option": "Laring",
@@ -83,7 +83,7 @@
             },
             {
                 "option": "Bronkiolus",
-                "is_true": false
+                "is_true": true
             }
         ]
     },
@@ -101,11 +101,11 @@
             },
             {
                 "option": "Sinusitis",
-                "is_true": true
+                "is_true": false
             },
             {
                 "option": "Influenza",
-                "is_true": false
+                "is_true": true
             }
         ]
     }

@@ -27,7 +27,7 @@
                     <label for="modal-heart" class="btn btn-ghost">
                         <div class="flex items-center gap-2">
                             <img src="assets/icons/heart.png" class="w-6" alt="">
-                            <h6 class="m-0 text-gray-600 font-bold">{{ user.condition.lives }}</h6>
+                            <h6 class="m-0 text-gray-600 font-bold">{{ user.condition.lives < 0 ? '0' : user.condition.lives }}</h6>
                         </div>
                     </label>
                 </div>
@@ -54,7 +54,7 @@ export default defineComponent({
         gotoPage(e: any, path: string) {
             e.preventDefault()
             this.$router.push({name: path})
-        } 
+        },
     }
 })    
 </script>

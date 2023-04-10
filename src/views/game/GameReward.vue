@@ -81,6 +81,10 @@ export default defineComponent({
     },
     mounted() {
         this.progressBar = 0
+        setTimeout(() => {
+            const audio = new Audio('/sound/win.mp3')
+            audio.play()
+        }, 200);
     },
     created() {
         const store = useStore()

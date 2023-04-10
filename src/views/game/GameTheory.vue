@@ -101,7 +101,6 @@ export default defineComponent({
         if (itemsString) {
             this.user = JSON.parse(itemsString);
         }
-
         this.case = this.listsCase[(paramId - 1)];
         this.loadJsonData(this.case);
     },
