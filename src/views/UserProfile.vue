@@ -1,15 +1,15 @@
 <template>
     <app-layout>
         <template v-slot:content>
-            <div class="min-h-screen bg-base-200 w-full">
-                <div class="relative pt-5 p-3 border-b-2 border-gray-300 pr-8 w-full h-16 flex items-center justify-between justify-items-between">
+            <div class="min-h-screen bg-base-200 w-full text-base-content">
+                <div class="relative pt-5 p-3 border-b-2 border-base-300 pr-8 w-full h-16 flex items-center justify-between justify-items-between">
                     <div>
                         <button class="btn btn-ghost">
                             <Icon icon="cil:cog" class="text-3xl text-primary"/>
                         </button>
                     </div>
                     <div>
-                        <h5 class="text-gray-600 font-bold">Profilku</h5>
+                        <h5 class="font-bold">Profilku</h5>
                     </div>
                 </div>
                 <div class="flex p-6 justify-between items-center">
@@ -25,9 +25,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex gap-5 px-6 pb-6 border-b-2 border-gray-300">
+                <div class="flex gap-5 px-6 pb-6 border-b-2 border-base-300">
                     <div>
-                        <label for="modal-language" class="btn bg-gray-200 text-gray-600 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-gray-400">
+                        <label for="modal-language" class="btn bg-base-100 text-gray-600 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-base-300">
                             <img :src="`/assets/flags/${user.country}.png`" class="w-8 rounded-lg" alt="">
                         </label>
                     </div>
@@ -40,7 +40,7 @@
                 <div class="p-6">
                     <h3 class="font-bold m-0 text-xl">Statistik</h3>
                     <div class="space-y-4 mt-3">
-                        <div class="w-full border-2 border-gray-300 p-4 rounded-xl">
+                        <div class="w-full border-2 border-base-300 p-4 rounded-xl">
                             <div class="flex gap-3">
                                 <div>
                                     <img src="/assets/icons/hot-sale.png" class="w-7" alt="fire">
@@ -51,7 +51,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full border-2 border-gray-300 p-4 rounded-xl">
+                        <div class="w-full border-2 border-base-300 p-4 rounded-xl">
                             <div class="flex gap-3">
                                 <div>
                                     <img src="/assets/icons/gem.png" class="w-7" alt="fire">
@@ -62,7 +62,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full border-2 border-gray-300 p-4 rounded-xl">
+                        <div class="w-full border-2 border-base-300 p-4 rounded-xl">
                             <div class="flex gap-3">
                                 <div>
                                     <img src="/assets/icons/heart.png" class="w-7" alt="fire">

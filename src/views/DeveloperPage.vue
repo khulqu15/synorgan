@@ -2,12 +2,12 @@
     <app-layout>
         <template v-slot:content>
             <div class="min-h-screen bg-base-200 w-full">
-                <div class="relative pt-5 p-3 border-b-2 border-gray-300 pr-8 w-full h-16 flex items-center justify-end justify-items-between">
+                <div class="relative pt-5 p-3 border-b-2 border-base-300 pr-8 w-full h-16 flex items-center justify-end justify-items-between">
                     <div>
-                        <h5 class="text-gray-600 font-bold">Pengembang</h5>
+                        <h5 class="text-base-content font-bold">Pengembang</h5>
                     </div>
                 </div>
-                <div class="p-6 border-b-2 border-gray-300">
+                <div class="p-6 border-b-2 border-base-300">
                     <h2 class="font-bold text-primary">Konten Writer</h2>
                     <div class="bg-white rounded-xl p-4">
                         <div class="flex justify-start mb-4 gap-4 items-center">
@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="p-6 space-y-5 pb-24">
-                    <h2 class="font-bold text-primary">Orbbit Team</h2>
+                    <!-- <h2 class="font-bold text-primary">Orbbit Team</h2>
                      <div class="bg-white rounded-xl p-4">
                         <div class="flex justify-start mb-4 gap-4 items-center">
                             <div>
@@ -83,11 +83,11 @@
                         <div class="bg-primary px-4 py-3 w-full text-white text-white rounded-xl">
                             <h6 class="m-0"><span class="font-bold">Universitas Negeri Surabaya</span> <br> <span class="text-sm">Teknologi Pendidikan</span></h6>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="text-center grid grid-cols-1 justify-items-center justify-center">
                         <div>
                             <img src="/assets/developer/logo_dev.png" alt="Orbbit Logo" class="w-16 mx-auto">
-                            <p class="text-sm mt-4">2023 Developed by <span class="font-bold text-primary">Orbbit Team</span></p>
+                            <p class="text-sm mt-4 text-base-content">2023 Developed by <span class="font-bold text-primary">Orbbit Team</span></p>
                         </div>
                     </div>
                 </div>

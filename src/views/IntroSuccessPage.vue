@@ -5,7 +5,7 @@
                 <div class="w-3/4 p-4 mb-12">
                     <img src="assets/intro success.svg" class="w-full" alt="Synorgan">
                     <h2 class="text-3xl text-primary font-bold m-0 mb-4">Horre.. Kini kamu telah siap</h2>
-                    <span class="text-sm text-gray-600">Selamat datang di aplikasi quiz dan edukasi organ dalam manusia! Kamu sudah siap untuk memulai.</span>
+                    <span class="text-sm text-base-content">Selamat datang di aplikasi quiz dan edukasi organ dalam manusia! Kamu sudah siap untuk memulai.</span>
                 </div>
             </div>
             <div class="fixed bottom-0 left-0 p-6 w-full">

@@ -5,7 +5,7 @@
                 <div class="w-full absolute left-0 top-0 px-6 py-4 flex items-center gap-4">
                     <div>
                         <button @click="decrementStep($event)" class="btn btn-ghost">
-                            <Icon icon="material-symbols:chevron-left-rounded" class="text-2xl"/>
+                            <Icon icon="material-symbols:chevron-left-rounded" class="text-2xl text-base-content"/>
                         </button>
                     </div>
                     <div class="grow w-full" v-if="intro > 2">
@@ -34,9 +34,9 @@
                             <img src="assets/sio face.svg" alt="sio" class="w-3/4 mx-auto">
                         </div>
                         <div class="relative w-full">
-                            <div class="absolute w-full bg-white h-144 -top-4 p-8 text-left rounded-2xl left-0">
-                                <label for="user-name" class="relative -top-2 text-gray-500">Masukkan nama kamu</label>
-                                <input type="text" id="user-name" v-model="user.name" placeholder="contoh: Andi" class="input w-full shadow-[0px_2px_0px_3px] shadow-gray-300" />
+                            <div class="absolute w-full bg-base-200 h-144 -top-4 p-8 text-left rounded-2xl left-0">
+                                <label for="user-name" class="relative -top-2 text-base-content">Masukkan nama kamu</label>
+                                <input type="text" id="user-name" v-model="user.name" placeholder="contoh: Andi" class="input w-full bg-base-100 shadow-[0px_2px_0px_3px] shadow-base-300" />
 
                             </div>
                         </div>
@@ -54,19 +54,19 @@
                         </div>
                         <div class="relative w-full mb-24">
                             <div v-for="(item, index) in classes" :key="`class-${index}`">
-                                <div @click="fillClass(index)" class="relative w-full bg-white h-144 transition-all -top-4 p-6 text-left rounded-2xl my-3 left-0" :class="{'border-2 border-indigo-500': user.class.type === item.type}">
+                                <div @click="fillClass(index)" class="relative w-full bg-base-300 h-144 transition-all -top-4 p-6 text-left rounded-2xl my-3 left-0" :class="{'border-2 border-indigo-500': user.class.type === item.type}">
                                     <div class="flex items-center gap-x-3">
                                         <div class="w-16 h-16 flex items-center justify-items-center text-center mb-3 rounded-xl" :class="{'bg-green-50': index <= 1, 'bg-indigo-100': index > 1}">
                                             <img :src="`assets/class/${item.type}.png`" class="w-8 mx-auto inline-block" alt="">
                                         </div>
                                         <div>
-                                            <h5 class="relative m-0 font-bold text-gray-500 mb-2">{{ item.name }}</h5>
+                                            <h5 class="relative m-0 font-bold text-base-content mb-2">{{ item.name }}</h5>
                                             <div class="w-32 rounded-xl pt-1.5 relative -top-2 py-1 bg-yellow-100 text-center">
                                                 <span class="text-yellow-600">Kelas {{ item.type }} SD</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <span class="text-sm">{{ item.description }}</span>
+                                    <span class="text-sm text-base-content">{{ item.description }}</span>
                                 </div>
                             </div>
                         </div>

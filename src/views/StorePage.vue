@@ -1,15 +1,15 @@
 <template>
     <ion-page>
         <ion-content>
-            <div class="min-h-screen bg-base-200">
-                <div class="relative p-3 w-full h-16 flex items-center justify-between justify-items-between border-b-2 border-gray-200">
+            <div class="min-h-screen bg-base-200 text-base-content">
+                <div class="relative p-3 w-full h-16 flex items-center justify-between justify-items-between border-b-2 border-base-300">
                     <div>
                         <button @click="$router.go(-1)" class="btn btn-ghost">
                             <Icon icon="material-symbols:close-rounded" class="text-2xl" />
                         </button>
                     </div>
                     <div>
-                        <h5 class="text-gray-600 font-bold">Toko</h5>
+                        <h5 class="font-bold">Toko</h5>
                     </div>
                     <div>
                         <div class="px-4 rounded-lg gap-2 flex items-center">
@@ -39,11 +39,11 @@
                             </div>
                         </button>
                     </div>
-                    <h4 class="font-bold text-gray-600">Penawaran Lain</h4>
-                    <div class="text-center space-y-3">
+                    <h4 class="font-bold text-base-content">Penawaran Lain</h4>
+                    <div class="text-center space-y-3 text-base-content">
                         <img src="/assets/closed store.svg" class="w-3/4 mx-auto" alt="">
-                        <h4 class="m-0 font-bold text-gray-500">Oops.. kami minta maaf</h4>
-                        <span class="text-gray-400">Sayangnya, masih belum ada <br> penawaran yang tersedia</span>
+                        <h4 class="m-0 font-bold">Oops.. kami minta maaf</h4>
+                        <span>Sayangnya, masih belum ada <br> penawaran yang tersedia</span>
                     </div>
                 </div>
             </div>

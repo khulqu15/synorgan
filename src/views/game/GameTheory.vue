@@ -13,13 +13,13 @@
                 <button class="btn btn-ghost">
                     <div class="flex items-center gap-2">
                         <img src="assets/icons/heart.png" class="w-6" alt="">
-                        <h6 class="m-0 text-gray-600 font-bold">{{ user.condition.lives }}</h6>
+                        <h6 class="m-0 font-bold">{{ user.condition.lives }}</h6>
                     </div>
                 </button>
             </div>
         </div>
         <ion-content>
-            <div class="min-h-screen w-full p-6 grid grid-cols-1 pt-24 justify-start">
+            <div class="min-h-screen w-full p-6 grid bg-base-100 grid-cols-1 pt-24 justify-start">
                 <div class="content" v-if="pages.length > 0">
                     <div class="flex items-center gap-x-2 mb-4">
                         <img :src="`/assets/icons/${dataGame.icon}`" class="w-8" :alt="dataGame.icon">
@@ -28,7 +28,7 @@
                     <div class="w-full rounded-xl mb-8 overflow-hidden p-0">
                         <img :src="`/assets/content/${pages[currentState].image}`" class="h-full h-full object-cover object-center" alt="">                        
                     </div>
-                    <div class="w-full p-5 pt-10 rounde-xl bg-gray-100 border-2 border-gray-00 rounded-xl relative">
+                    <div class="w-full p-5 pt-10 rounde-xl bg-base-200 text-base-content border-2 border-base-300 rounded-xl relative">
                         <div class="inline-block bg-primary px-4 py-2 rounded-xl absolute -top-5 left-0">
                             <h4 class="font-bold text-white m-0">{{ pages[currentState].title }}</h4>
                         </div>
@@ -49,10 +49,10 @@
                     <h3 class="text-lg font-bold">Kamu mau keluar ?</h3>
                     <p class="mb-4">Belajar dengan serius membuatmu lebih pintar.</p>
                 </div>
-                <button @click="forceExit()" class="btn mt-3 bg-red-500 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-red-800">
+                <button @click="forceExit()" class="btn mt-3 bg-red-500 text-white w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-red-800">
                     Saya mau keluar
                 </button>
-                <label for="modal-back" class="btn mt-3 bg-red-500 w-full rounded-xl">
+                <label for="modal-back" class="btn mt-3 bg-red-500 text-white w-full rounded-xl">
                     Tidak jadi
                 </label>
             </label>

@@ -1,109 +1,111 @@
 <template>
     <ion-page>
-        <div  v-if="!welcome && !closing" class="flex p-4 fixed top-0 z-50 w-full items-center gap-x-4 justify-items-between justify-start">
-            <div>
-                <button @click="prevContent()" class="btn btn-ghost">
-                    <Icon class="text-xl" :icon="progressBar == 0 ? 'humbleicons:times' : 'material-symbols:chevron-left'"/>
-                </button>
-            </div>
-            <div class="grow">
-                <progress :key="`value-${progressBar}`" class="progress progress-primary w-full" :value="progressBar" max="100"></progress>
-            </div>
-            <div :key="`heart-${progressBar}`">
-                <button class="btn btn-ghost">
-                    <div class="flex items-center gap-2">
-                        <img src="assets/icons/heart.png" class="w-6" alt="">
-                        <h6 class="m-0 text-gray-600 font-bold">{{ currentLives }}</h6>
-                    </div>
-                </button>
-            </div>
-        </div>
         <ion-content>
-            <div class="min-h-screen w-full p-6 grid grid-cols-1 pt-24 justify-start">
-                <div v-if="welcome" class="text-center w-3/4 mx-auto py-12 space-y-4">
-                    <img src="/assets/starting.svg" class="w-full" alt="Starting">
-                    <h2 class="text-primary font-bold">Selamat memulai quiz, semangat ya!</h2>
-                    <p class="text-gray-700">Jangan takut untuk salah, yang terpenting adalah semangat dan belajar dari kesalahan.</p>
-                    <RadialProgress :totalTime="radialProgress.time" :message="radialProgress.message" />
-                </div>
-                <div v-if="closing" class="text-center w-3/4 mx-auto py-12 space-y-4">
-                    <img :src="`/assets/${result.image}`" class="w-full" alt="Starting">
-                    <h2 class="text-primary font-bold">{{ result.title }}</h2>
-                    <p class="text-gray-700">{{ result.description }}</p>
-                    <div class="fixed w-full bottom-0 p-6 left-0">
-                        <button @click="$router.push({name: 'DashboardPage'})" class="btn mt-3 w-full rounded-xl shadow-[0px_2px_0px_3px] btn-primary shadow-indigo-800">
-                            Lanjutkan
+            <div class="bg-base-100 text-base-content">
+                <div  v-if="!welcome && !closing" class="flex p-4 fixed top-0 z-50 w-full items-center gap-x-4 justify-items-between justify-start">
+                    <div>
+                        <button @click="prevContent()" class="btn btn-ghost">
+                            <Icon class="text-xl" :icon="progressBar == 0 ? 'humbleicons:times' : 'material-symbols:chevron-left'"/>
+                        </button>
+                    </div>
+                    <div class="grow">
+                        <progress :key="`value-${progressBar}`" class="progress progress-primary w-full" :value="progressBar" max="100"></progress>
+                    </div>
+                    <div :key="`heart-${progressBar}`">
+                        <button class="btn btn-ghost">
+                            <div class="flex items-center gap-2">
+                                <img src="assets/icons/heart.png" class="w-6" alt="">
+                                <h6 class="m-0 font-bold">{{ currentLives }}</h6>
+                            </div>
                         </button>
                     </div>
                 </div>
-                <div v-if="!welcome && !closing">
-                    <div :key="`state-${click_iteration}`" class="content" v-if="pages.length > 0 && pages[currentState]">
-                        <div class="flex items-center gap-x-2 mb-4">
-                            <img :src="`/assets/icons/${dataGame.icon}`" class="w-8" :alt="dataGame.icon">
-                            <h5 class="m-0 font-semibold text-primary" v-if="dataGame.name">{{ dataGame.name }}</h5>
-                        </div>
-                        <div v-html="pages[currentState].title"></div>
-                        <div v-if="pages[currentState].answers && pages[currentState].answers.length > 0" class="space-y-3">
-                            <div @click="selectedAnswer(item, index)" v-for="(item, index) in pages[currentState].answers" :key="`option-${currentState}-${index}`" 
-                            class="w-full transition-all p-4 rounde-xl bg-gray-100 border-2 gap-x-3 border-gray-00 rounded-xl relative flex items-center"
-                            :class="{'bg-primary text-white shadow-xl border-0': selectedOption === index}">
-                                <div>
-                                    <h6 class="m-0 font-bold text-primary" :class="{'text-white': selectedOption === index}">{{ integerToAlphabet(index) }}.</h6>
-                                </div>
-                                <div>
-                                    <p class="m-0">{{ item.option }}.</p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="min-h-screen w-full p-6 grid grid-cols-1 pt-24 justify-start">
+                    <div v-if="welcome" class="text-center w-3/4 mx-auto py-12 space-y-4">
+                        <img src="/assets/starting.svg" class="w-full" alt="Starting">
+                        <h2 class="text-primary font-bold">Selamat memulai quiz, semangat ya!</h2>
+                        <p class="text-base-content">Jangan takut untuk salah, yang terpenting adalah semangat dan belajar dari kesalahan.</p>
+                        <RadialProgress :totalTime="radialProgress.time" :message="radialProgress.message" />
                     </div>
-                    <input type="checkbox" id="modal-true" class="modal-toggle" />
-                    <div v-if="selectedOption != null" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
-                        <div class="modal-box relative bg-white">
-                            <div class="text-green-500">
-                                <h3 class="text-lg font-bold">Hore Benar.. Kamu Hebatt !</h3>
-                                <p class="mb-4">Jawaban kamu benar: <b>{{ pages[currentState].answers[selectedOption].option }}</b></p>
-                            </div>
-                            <button @click="forceNextContent()" class="btn mt-3 bg-green-500 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-green-700">
+                    <div v-if="closing" class="text-center w-3/4 mx-auto py-12 space-y-4">
+                        <img :src="`/assets/${result.image}`" class="w-full" alt="Starting">
+                        <h2 class="text-primary font-bold">{{ result.title }}</h2>
+                        <p class="text-base-content">{{ result.description }}</p>
+                        <div class="fixed w-full bottom-0 p-6 left-0">
+                            <button @click="$router.push({name: 'DashboardPage'})" class="btn mt-3 w-full rounded-xl shadow-[0px_2px_0px_3px] btn-primary shadow-indigo-800">
                                 Lanjutkan
                             </button>
                         </div>
                     </div>
-                    <input type="checkbox" id="modal-false" class="modal-toggle" />
-                    <div v-if="selectedOption != null" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
-                        <div class="modal-box relative bg-white">
-                            <div class="text-red-500">
-                                <h3 class="text-lg font-bold">Jawaban Kamu Salah !</h3>
-                                <p class="mb-4">Jawaban yang benar: <b>{{ findCorrectAnswer(pages[currentState].answers).option }}</b></p>
+                    <div v-if="!welcome && !closing">
+                        <div :key="`state-${click_iteration}`" class="content" v-if="pages.length > 0 && pages[currentState]">
+                            <div class="flex items-center gap-x-2 mb-4">
+                                <img :src="`/assets/icons/${dataGame.icon}`" class="w-8" :alt="dataGame.icon">
+                                <h5 class="m-0 font-semibold text-primary" v-if="dataGame.name">{{ dataGame.name }}</h5>
                             </div>
-                            <button @click="forceNextContent()" class="btn mt-3 bg-red-500 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-red-700">
-                                Lanjutkan
+                            <div v-html="pages[currentState].title"></div>
+                            <div v-if="pages[currentState].answers && pages[currentState].answers.length > 0" class="space-y-3">
+                                <div @click="selectedAnswer(item, index)" v-for="(item, index) in pages[currentState].answers" :key="`option-${currentState}-${index}`" 
+                                class="w-full transition-all p-4 rounde-xl bg-base-200 border-2 gap-x-3 border-base-300 rounded-xl relative flex items-center"
+                                :class="{'bg-primary text-white shadow-xl border-0': selectedOption === index}">
+                                    <div>
+                                        <h6 class="m-0 font-bold text-primary" :class="{'text-white': selectedOption === index}">{{ integerToAlphabet(index) }}.</h6>
+                                    </div>
+                                    <div>
+                                        <p class="m-0">{{ item.option }}.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="checkbox" id="modal-true" class="modal-toggle" />
+                        <div v-if="selectedOption != null" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
+                            <div class="modal-box relative bg-white">
+                                <div class="text-green-500">
+                                    <h3 class="text-lg font-bold">Hore Benar.. Kamu Hebatt !</h3>
+                                    <p class="mb-4">Jawaban kamu benar: <b>{{ pages[currentState].answers[selectedOption].option }}</b></p>
+                                </div>
+                                <button @click="forceNextContent()" class="btn mt-3 bg-green-500 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-green-700">
+                                    Lanjutkan
+                                </button>
+                            </div>
+                        </div>
+                        <input type="checkbox" id="modal-false" class="modal-toggle" />
+                        <div v-if="selectedOption != null" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
+                            <div class="modal-box relative bg-white">
+                                <div class="text-red-500">
+                                    <h3 class="text-lg font-bold">Jawaban Kamu Salah !</h3>
+                                    <p class="mb-4">Jawaban yang benar: <b>{{ findCorrectAnswer(pages[currentState].answers).option }}</b></p>
+                                </div>
+                                <button @click="forceNextContent()" class="btn mt-3 bg-red-500 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-red-700">
+                                    Lanjutkan
+                                </button>
+                            </div>
+                        </div>
+                        <div class="fixed w-full bottom-0 p-6 left-0">
+                            <button @click="nextContent()" class="btn mt-3 w-full rounded-xl shadow-[0px_2px_0px_3px]"
+                            :class="{'btn shadow-gray-500': selectedOption === null, 'btn-primary shadow-indigo-800': selectedOption !== null}">
+                                {{ progressBar == 100 ? "Selesaikan" : "Selanjutnya" }}
                             </button>
                         </div>
                     </div>
-                    <div class="fixed w-full bottom-0 p-6 left-0">
-                        <button @click="nextContent()" class="btn mt-3 w-full rounded-xl shadow-[0px_2px_0px_3px]"
-                        :class="{'btn shadow-gray-500': selectedOption === null, 'btn-primary shadow-indigo-800': selectedOption !== null}">
-                            {{ progressBar == 100 ? "Selesaikan" : "Selanjutnya" }}
-                        </button>
-                    </div>
                 </div>
+                <input type="checkbox" id="modal-back" class="modal-toggle" />
+                <label for="modal-back" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
+                    <label class="modal-box relative bg-red-500" for="">
+                        <div class="text-white">
+                            <h3 class="text-lg font-bold">Kamu mau keluar ?</h3>
+                            <p class="mb-4">Belajar dengan serius membuatmu lebih pintar.</p>
+                        </div>
+                        <button @click="forceExit()" class="btn mt-3 text-white bg-red-500 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-red-800">
+                            Saya mau keluar
+                        </button>
+                        <label for="modal-back" class="btn text-white mt-3 bg-red-500 w-full rounded-xl">
+                            Tidak jadi
+                        </label>
+                    </label>
+                </label>
             </div>
         </ion-content>
-        <input type="checkbox" id="modal-back" class="modal-toggle" />
-        <label for="modal-back" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
-            <label class="modal-box relative bg-red-500" for="">
-                <div class="text-white">
-                    <h3 class="text-lg font-bold">Kamu mau keluar ?</h3>
-                    <p class="mb-4">Belajar dengan serius membuatmu lebih pintar.</p>
-                </div>
-                <button @click="forceExit()" class="btn mt-3 bg-red-500 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-red-800">
-                    Saya mau keluar
-                </button>
-                <label for="modal-back" class="btn mt-3 bg-red-500 w-full rounded-xl">
-                    Tidak jadi
-                </label>
-            </label>
-        </label>
     </ion-page>
 </template>
 

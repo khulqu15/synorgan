@@ -1,17 +1,17 @@
 <template>
     <div class="w-full h-16 fixed left-0 top-0">
-        <div class="border-b-2 p-3 bg-base-100 pt-6 shadow-5xl border-gray-200">
+        <div class="border-b-2 p-3 bg-base-100 pt-6 shadow-5xl border-base-300">
             <div class="flex items-center justify-items-center justify-center text-center">
                 <div class="grow">
                     <label for="modal-language" class="btn btn-ghost px-2">
-                        <img :src="`assets/flags/${user.country}.png`" class="rounded-lg border-2 border-white w-8" alt="flags">
+                        <img :src="`assets/flags/${user.country}.png`" class="rounded-lg border-2 border-base-300 w-8" alt="flags">
                     </label>
                 </div>
                 <div class="grow">
                     <label for="modal-active" class="btn btn-ghost">
                         <div class="flex items-center gap-2">
                             <img src="assets/icons/hot-sale.png" class="w-6" alt="">
-                            <h6 class="m-0 text-gray-600 font-bold">{{ user.condition.active_count }}</h6>
+                            <h6 class="m-0 text-base-content font-bold">{{ user.condition.active_count }}</h6>
                         </div>
                     </label>
                 </div>
@@ -19,7 +19,7 @@
                     <button @click="gotoPage($event, 'StorePage')" class="btn btn-ghost">
                         <div class="flex items-center gap-2">
                             <img src="assets/icons/gem.png" class="w-6" alt="">
-                            <h6 class="m-0 text-gray-600 font-bold">{{ user.condition.gems }}</h6>
+                            <h6 class="m-0 text-base-content font-bold">{{ user.condition.gems }}</h6>
                         </div>
                     </button>
                 </div>
@@ -27,7 +27,7 @@
                     <label for="modal-heart" class="btn btn-ghost">
                         <div class="flex items-center gap-2">
                             <img src="assets/icons/heart.png" class="w-6" alt="">
-                            <h6 class="m-0 text-gray-600 font-bold">{{ user.condition.lives < 0 ? '0' : user.condition.lives }}</h6>
+                            <h6 class="m-0 text-base-content font-bold">{{ user.condition.lives < 0 ? '0' : user.condition.lives }}</h6>
                         </div>
                     </label>
                 </div>

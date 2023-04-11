@@ -1,23 +1,23 @@
 <template>
     <ion-page>
         <ion-content>
-            <div class="min-h-screen w-full p-6 grid grid-cols-1 pt-12 justify-start">
+            <div class="min-h-screen bg-base-100 text-base-content w-full p-6 grid grid-cols-1 pt-12 justify-start">
                 <div class="content">
                     <div class="flex items-center gap-x-2 mb-4">
                         <img :src="`/assets/icons/${dataGame.icon}`" class="w-8" :alt="dataGame.icon">
                         <h5 class="m-0 font-semibold text-primary" v-if="dataGame.name">{{ dataGame.name }}</h5>
                     </div>
                     <div class="text-center pt-8 space-y-4">
-                        <h4 class="text-gray-700 font-bold">Horeee.. Selamat kamu dapat hadiah dari dokter SiO</h4>
+                        <h4 class="font-bold">Horeee.. Selamat kamu dapat hadiah dari dokter SiO</h4>
                         <img src="/assets/gift.svg" alt="Gift" class="w-3/4 mx-auto">
                         <p>Tetap konsisten dan semangat belajar agar kamu bertambah pintar</p>
                     </div>
-                    <div class="p-3 relative bg-gray-100 rounded-xl border-2 border-gray-200 mt-7">
+                    <div class="p-3 relative bg-base-200 rounded-xl border-2 border-base-300 mt-7">
                         <div class="inline-block px-3 py-2 bg-primary rounded-xl absolute -top-4 left-0">
                             <h5 class="m-0 text-white font-bold">Kamu mendapatkan </h5>
                         </div>
                         <div class="grid grid-cols-2 gap-x-4 items-center pt-6 p-2">
-                            <div class="w-full border-r-2 border-gray-200 flex gap-x-3">
+                            <div class="w-full border-r-2 border-base-300 flex gap-x-3">
                                 <img src="/assets/icons/heart.png" class="w-12" alt="Hati">
                                 <h3 class="text-red-500 font-bold">{{ reward.lives }}</h3>
                             </div>

@@ -185,11 +185,11 @@
         },
         {
           "option": "1A, 2B, 3C",
-          "is_true": false
+          "is_true": true
         },
         {
           "option": "1A, 2B, 2C",
-          "is_true": true
+          "is_true": false
         },
         {
           "option": "3A, 2C, 3B",

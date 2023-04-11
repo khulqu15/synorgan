@@ -1,6 +1,6 @@
 <template>
     <div class="w-full h-20 fixed left-0 -bottom-2 z-20">
-        <div class="border-t-2 p-3 bg-base-100 shadow-5xl border-gray-200">
+        <div class="border-t-2 p-3 bg-base-100 shadow-5xl border-base-300">
             <div class="flex items-center justify-items-center justify-center text-center">
                 <div class="grow">
                     <button @click="$router.push({name: 'DashboardPage'})" class="btn btn-ghost">

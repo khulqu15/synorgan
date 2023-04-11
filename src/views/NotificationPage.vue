@@ -2,12 +2,12 @@
     <app-layout>
         <template v-slot:content>
             <div class="min-h-screen bg-base-200 w-full">
-                <div class="relative pt-5 p-3 border-b-2 border-gray-300 pr-8 w-full h-16 flex items-center justify-end justify-items-between">
+                <div class="relative pt-5 p-3 border-b-2 border-base-300 pr-8 w-full h-16 flex items-center justify-end justify-items-between">
                     <div>
-                        <h5 class="text-gray-600 font-bold">Notifikasi</h5>
+                        <h5 class="text-base-content font-bold">Notifikasi</h5>
                     </div>
                 </div>
-                <div class="pt-20 text-center mx-auto w-3/4">
+                <div class="pt-20 text-base-content text-center mx-auto w-3/4">
                     <img src="/assets/notif.svg" class="w-full mx-auto" alt="No Gift">
                     <h4 class="font-bold">Hmmm.. Sepertinya kamu tidak notifikasi</h4>
                     <p>Nanti akan dikabari kalau ada notifikasi</p>

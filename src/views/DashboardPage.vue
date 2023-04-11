@@ -51,7 +51,7 @@
                                     <h3 class="text-lg font-bold">Kamu tidak boleh melompat.</h3>
                                     <p class="mb-4">Belajar sedikit demi sedikit akan lebih baik.</p>
                                 </div>
-                                <label for="modal-danger" class="btn mt-3 bg-red-500 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-red-800">
+                                <label for="modal-danger" class="btn mt-3 text-white bg-red-500 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-red-800">
                                     Baik
                                 </label>
                             </label>
@@ -150,8 +150,8 @@ export default defineComponent({
         { name: 'Quiz Faring', type: 'quiz', icon: 'question.png', image: 'lock.png', description: 'Ayo belajar tentang fungsi faring manusia !', is_open: false, link: "GameQuiz", is_done: false, id: 2},
         { name: 'Hadiah Untuk Kamu', type: 'reward', icon: 'gift-box.png', image: 'reward.png', description: 'Kamu dapat hadiah nih dari dokter faring', is_open: false, link: "GameReward", is_done: false, id: 2},
         //
-        { name: 'Pelajari Faring', type: 'theory', icon: 'book.png', image: 'theory.png', description: 'Ayo belajar tentang fungsi laring manusia !', is_open: false, link: "GameTheory", is_done: false, id: 3},
-        { name: 'Quiz Faring', type: 'quiz', icon: 'question.png', image: 'lock.png', description: 'Ayo belajar tentang fungsi laring manusia !', is_open: false, link: "GameQuiz", is_done: false, id: 3},
+        { name: 'Pelajari Laring', type: 'theory', icon: 'book.png', image: 'theory.png', description: 'Ayo belajar tentang fungsi laring manusia !', is_open: false, link: "GameTheory", is_done: false, id: 3},
+        { name: 'Quiz Laring', type: 'quiz', icon: 'question.png', image: 'lock.png', description: 'Ayo belajar tentang fungsi laring manusia !', is_open: false, link: "GameQuiz", is_done: false, id: 3},
         { name: 'Hadiah Untuk Kamu', type: 'reward', icon: 'gift-box.png', image: 'reward.png', description: 'Kamu dapat hadiah nih dari dokter laring', is_open: false, link: "GameReward", is_done: false, id: 3},
         //
         { name: 'Pelajari Trakea', type: 'theory', icon: 'book.png', image: 'theory.png', description: 'Ayo belajar tentang fungsi trakea manusia', is_open: false, link: "GameTheory", is_done: false, id: 4},

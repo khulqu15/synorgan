@@ -9,16 +9,16 @@
                 <input type="checkbox" id="modal-language" class="modal-toggle" />
                 <label for="modal-language" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
                     <label class="modal-box relative" for="">
-                        <h3 class="text-lg font-bold">Pilih Bahasa</h3>
+                        <h3 class="text-lg font-bold text-base-content">Pilih Bahasa</h3>
                         <div v-for="(language, index) in languages" :key="`lang-${index}`" 
                         @click="chooseLanguage(language.name)"
-                        :class="{'bg-primary/10': lowerCase(language.name) === user.country}"
-                        class="my-2 flex transition-all px-4 rounded-xl gap-6 items-center justify-start hover:bg-primary/10">
+                        :class="{'bg-primary/20': lowerCase(language.name) === user.country}"
+                        class="my-2 flex transition-all px-4 rounded-xl gap-6 items-center justify-start hover:bg-primary/20">
                             <div>
                                 <img :src="`assets/flags/${language.image}`" class="w-10 rounded-lg" alt="lang">
                             </div>
                             <div>
-                                <h5>{{ language.name }}</h5>
+                                <h5 class="text-base-content">{{ language.name }}</h5>
                             </div>
                         </div>
                     </label>
@@ -27,9 +27,9 @@
                 <input type="checkbox" id="modal-active" class="modal-toggle" />
                 <label for="modal-active" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
                     <label class="modal-box relative" for="">
-                        <h3 class="text-lg font-bold">Ayoo Semangat!</h3>
-                        <div class="grid grid-cols-2 items-center border-2 justify-items-center rounded-xl border-gray-200">
-                            <div class="p-4 w-full text-center border-r-2 border-gray-200">
+                        <h3 class="text-lg font-bold text-base-content">Ayoo Semangat!</h3>
+                        <div class="grid grid-cols-2 text-base-content items-center border-2 justify-items-center rounded-xl border-base-300">
+                            <div class="p-4 w-full text-center border-r-2 border-base-300">
                                 <img src="/assets/icons/hot-sale.png" class="w-8 mb-3 mx-auto" alt="">
                                 <h5 class="font-bold m-0">{{ user.condition.active_count }} Hari</h5>
                                 <p class="text-sm">Progress saat ini</p>
@@ -40,7 +40,7 @@
                                 <p class="text-sm">Tujuan target</p>
                             </div>
                         </div>
-                        <label for="modal-active" class="btn mt-3 bg-gray-200 text-gray-600 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-gray-400">
+                        <label for="modal-active" class="btn mt-3 bg-base-100 text-base-content w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-base-300">
                             Tutup
                         </label>
                     </label>
@@ -60,10 +60,10 @@
                                 <img src="/assets/icons/heart.png" class="w-10" alt="">
                             </div>
                         </div>
-                        <h5 class="font-semibold text-gray-500 m-2">Hatimu masih penuh</h5>
+                        <h5 class="font-semibold text-base-content m-2">Hatimu masih penuh</h5>
                         <h5 class="font-bold text-primary m-2 my-4">Ayo terus belajar !</h5>
                         <div class="space-y-5">
-                            <button  class="btn bg-gray-200 text-gray-600 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-gray-400 flex justify-between">
+                            <button  class="btn bg-base-100 text-base-content w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-base-300 flex justify-between">
                                 <div class="flex items-center justify-start gap-2">
                                     <Icon class="text-2xl" icon="mdi:heart-multiple-outline" />
                                     <span>Isi Ulang Hati</span>
@@ -83,7 +83,7 @@
                                     <span>200</span>
                                 </div>
                             </button>
-                            <button  class="btn bg-gray-200 text-gray-600 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-gray-400 flex justify-between">
+                            <button  class="btn bg-base-100 text-base-content w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-base-300 flex justify-between">
                                 <div class="flex items-center justify-start gap-2">
                                     <img src="/assets/icons/heart.png" class="w-8" alt="">
                                     <span>Quiz Gratis Hati</span>

@@ -3,7 +3,7 @@
     <div class="overflow-hidden rounded-full w-24 h-24">
       <div :style="`transform: rotate(${percentage}deg); transition: transform 1s ease-out;`"
            class="absolute top-0 left-0 w-full h-full rounded-full bg-primary"></div>
-      <div class="absolute top-0 left-0 w-full h-full rounded-full bg-white"></div>
+      <div class="absolute top-0 left-0 w-full h-full rounded-full bg-base-100"></div>
       <div class="absolute top-0 left-0 w-full h-full rounded-full border-4 border-dashed border-primary"></div>
       <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
         <span class="text-lg font-semibold text-primary">{{ percentage }}%</span>

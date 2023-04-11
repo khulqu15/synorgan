@@ -2,14 +2,14 @@
     <app-layout>
         <template v-slot:content>
             <div class="min-h-screen bg-base-200 w-full">
-                <div class="relative pt-5 p-3 border-b-2 border-gray-300 pr-8 w-full h-16 flex items-center justify-end justify-items-between">
+                <div class="relative pt-5 p-3 border-b-2 border-base-300 pr-8 w-full h-16 flex items-center justify-end justify-items-between">
                     <div>
-                        <h5 class="text-gray-600 font-bold">Hadiahku</h5>
+                        <h5 class="text-base-content font-bold">Hadiahku</h5>
                     </div>
                 </div>
                 <div v-if="reward.length > 0" class="p-6 space-y-5 pb-24">
                     <h2 class="font-bold text-primary">List Hadiah</h2>
-                     <div v-for="(item, index) in reward" :key="`reward-${index}`" class="bg-white rounded-xl p-4">
+                     <div v-for="(item, index) in reward" :key="`reward-${index}`" class="bg-base-300 text-base-content rounded-xl p-4">
                         <div class="flex justify-start gap-4 items-center">
                             <div>
                                 <div class="avatar">
@@ -35,7 +35,7 @@
                         <button @click="onClaim(item, index)" class="btn btn-primary w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-violet-900">Klaim Sekarang</button>
                     </div>
                 </div>
-                <div v-else class="pt-20 text-center mx-auto w-3/4">
+                <div v-else class="pt-20 text-center text-base-content mx-auto w-3/4">
                     <img src="/assets/no-gift.svg" class="w-full mx-auto" alt="No Gift">
                     <h4 class="font-bold">Hmmm.. Sepertinya kamu tidak punya hadiah dari dokter</h4>
                     <p>Ayo belajar, jawab quiz dan dapatkan hadiah dari dokter SiO</p>

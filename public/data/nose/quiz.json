@@ -4,7 +4,7 @@
         "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Hidung memiliki bagian yang berguna untuk membau adalah...</h6></div>",
         "answers": [
             {
-                "option": "Silla",
+                "option": "Silia",
                 "is_true": false
             },
             {
@@ -23,7 +23,7 @@
     },
     {
         "image": "nose4.png",
-        "title": "<div class='overflow-x-auto'><table class='table text-sm table-zebra table-compact w-full mb-6'><thead><tr><th>No</th><th>A</th><th>B</th><th>C</th></tr></thead><tbody><tr><th>1</th><td>Organ pernapasan</td><td>Indera melihat</td><td>Organ peraba</td></tr><tr><th>2</th><td>Organ perasa</td><td>Pemberi rasa pada makanan</td><td>Indera pencium</td></tr><tr><th>3</th><td>Indera pendnegaran</td><td>Merasakan rasa pahit, manis, asin dan asam</td><td>menjaga keseimbangan tubuh</td></tr></tbody></table></div><div class='inline-block text-grey-700 py-2 rounded-xl relative pt-5 -top-5 left-0'><h6 class='font-bold m-0'>Yang termasuk fungsi hidung adalah...</h6></div>",
+        "title": "<div class='overflow-x-auto'><table class='table text-sm table-zebra table-compact w-full mb-6'><thead><tr><th>No</th><th>A</th><th>B</th><th>C</th></tr></thead><tbody><tr><th>1</th><td>Organ pernapasan</td><td>Indera melihat</td><td>Organ peraba</td></tr><tr><th>2</th><td>Organ perasa</td><td>Pemberi rasa pada makanan</td><td>Indera pembau</td></tr><tr><th>3</th><td>Indera pendengaran</td><td>Merasakan rasa pahit, manis, asin dan asam</td><td>menjaga keseimbangan tubuh</td></tr></tbody></table></div><div class='inline-block text-grey-700 py-2 rounded-xl relative pt-5 -top-5 left-0'><h6 class='font-bold m-0'>Yang termasuk fungsi hidung adalah...</h6></div>",
         "answers": [
             {
                 "option": "1A, 1B, 1C",
@@ -31,11 +31,11 @@
             },
             {
                 "option": "1A, 2B, 3C",
-                "is_true": false
+                "is_true": true
             },
             {
                 "option": "1A, 2B, 2C",
-                "is_true": true
+                "is_true": false
             },
             {
                 "option": "3A, 2C, 3B",
@@ -45,7 +45,7 @@
     },
     {
         "image": "nose5.png",
-        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Perhatikan pernyataan – pernyataan berikut ini !<ul class='list-disc pl-4 font-normal my-3'><li>Melindungi hidung dari ancaman yang berasal dari luar</li><li>Mengatur ukuran benda atau sesuatu yang bisa masuk ke hidung</li></ul>Dua pernyataan diatas merupakan fungsi dari...</h6></div>",
+        "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Perhatikan pernyataan – pernyataan berikut ini !</h6><ul style='list-style-type: decimal; margin-left: 16px' class='list-decimal pl-4 font-normal my-3'><li>Melindungi hidung dari ancaman yang berasal dari luar</li><li>Mengatur ukuran benda atau sesuatu yang bisa masuk ke hidung</li></ul><h6 class='font-bold m-0'>Dua pernyataan diatas merupakan fungsi dari...</h6></div>",
         "answers": [
             {
                 "option": "Rongga Hidung",
@@ -60,7 +60,7 @@
                 "is_true": true
             },
             {
-                "option": "Septum Hiduung",
+                "option": "Septum Hidung",
                 "is_true": false
             }
         ]
