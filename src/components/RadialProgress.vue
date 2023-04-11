@@ -30,12 +30,12 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const percentage = ref(100)
+    const percentage = ref(0)
 
     setTimeout(() => {
       const intervalId = setInterval(() => {
-        if (percentage.value > 0) {
-          percentage.value -= 1
+        if (percentage.value < 100) {
+          percentage.value += 1
         } else {
           clearInterval(intervalId)
         }

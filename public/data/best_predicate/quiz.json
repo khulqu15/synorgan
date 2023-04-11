@@ -167,11 +167,11 @@
         },
         {
           "option": "Rambut",
-          "is_true": true
+          "is_true": false
         },
         {
           "option": "Hidung",
-          "is_true": false
+          "is_true": true
         }
       ]
     },

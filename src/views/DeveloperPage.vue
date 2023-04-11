@@ -9,7 +9,7 @@
                 </div>
                 <div class="p-6 border-b-2 border-base-300">
                     <h2 class="font-bold text-primary">Konten Writer</h2>
-                    <div class="bg-white rounded-xl p-4">
+                    <div class="bg-base-200 text-base-content rounded-xl p-4">
                         <div class="flex justify-start mb-4 gap-4 items-center">
                             <div>
                                 <div class="avatar">
@@ -20,7 +20,7 @@
                             </div>
                             <div>
                                 <h3 class="font-bold m-0 text-xl">Ula Nurmala</h3>
-                                <p class="text-sm text-gray-600">19010644037</p>
+                                <p class="text-sm text-base-content">19010644037</p>
                             </div>
                         </div>
                         <div class="bg-primary px-4 py-3 w-full text-white text-white rounded-xl">

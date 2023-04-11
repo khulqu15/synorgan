@@ -1,6 +1,6 @@
 <template>
     <ion-page>
-        <div class="flex p-4 fixed top-0 z-50 w-full items-center gap-x-4 justify-items-between justify-start">
+        <div class="flex bg-base-100 p-4 fixed top-0 z-50 w-full items-center gap-x-4 justify-items-between justify-start">
             <div>
                 <button @click="prevContent()" class="btn btn-ghost">
                     <Icon class="text-xl" :icon="progressBar == 0 ? 'humbleicons:times' : 'material-symbols:chevron-left'"/>
@@ -19,7 +19,7 @@
             </div>
         </div>
         <ion-content>
-            <div class="min-h-screen w-full p-6 grid bg-base-100 grid-cols-1 pt-24 justify-start">
+            <div class="min-h-screen w-full p-6 grid bg-base-100 grid-cols-1 py-24 justify-start">
                 <div class="content" v-if="pages.length > 0">
                     <div class="flex items-center gap-x-2 mb-4">
                         <img :src="`/assets/icons/${dataGame.icon}`" class="w-8" :alt="dataGame.icon">
@@ -35,8 +35,8 @@
                         <p v-html="pages[currentState].description"></p>
                     </div>
                 </div>
-                <div class="fixed w-full bottom-0 p-6 left-0">
-                    <button @click="nextContent()" class="btn mt-3 btn-primary w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-indigo-800">
+                <div class="fixed bg-base-100 w-full bottom-0 p-6 left-0">
+                    <button @click="nextContent()" class="btn btn-primary w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-indigo-800">
                         {{ progressBar == 100 ? "Selesaikan" : "Selanjutnya" }}
                     </button>
                 </div>

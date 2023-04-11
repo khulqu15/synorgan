@@ -2,7 +2,7 @@
     <ion-page>
         <ion-content>
             <div class="bg-base-100 text-base-content">
-                <div  v-if="!welcome && !closing" class="flex p-4 fixed top-0 z-50 w-full items-center gap-x-4 justify-items-between justify-start">
+                <div  v-if="!welcome && !closing" class="flex bg-base-100 p-4 fixed top-0 z-50 w-full items-center gap-x-4 justify-items-between justify-start">
                     <div>
                         <button @click="prevContent()" class="btn btn-ghost">
                             <Icon class="text-xl" :icon="progressBar == 0 ? 'humbleicons:times' : 'material-symbols:chevron-left'"/>
@@ -20,7 +20,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="min-h-screen w-full p-6 grid grid-cols-1 pt-24 justify-start">
+                <div class="min-h-screen w-full p-6 grid grid-cols-1 py-24 justify-start">
                     <div v-if="welcome" class="text-center w-3/4 mx-auto py-12 space-y-4">
                         <img src="/assets/starting.svg" class="w-full" alt="Starting">
                         <h2 class="text-primary font-bold">Selamat memulai quiz, semangat ya!</h2>
@@ -59,7 +59,7 @@
                         </div>
                         <input type="checkbox" id="modal-true" class="modal-toggle" />
                         <div v-if="selectedOption != null" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
-                            <div class="modal-box relative bg-white">
+                            <div class="modal-box relative bg-base-100">
                                 <div class="text-green-500">
                                     <h3 class="text-lg font-bold">Hore Benar.. Kamu Hebatt !</h3>
                                     <p class="mb-4">Jawaban kamu benar: <b>{{ pages[currentState].answers[selectedOption].option }}</b></p>
@@ -71,7 +71,7 @@
                         </div>
                         <input type="checkbox" id="modal-false" class="modal-toggle" />
                         <div v-if="selectedOption != null" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
-                            <div class="modal-box relative bg-white">
+                            <div class="modal-box relative bg-base-100">
                                 <div class="text-red-500">
                                     <h3 class="text-lg font-bold">Jawaban Kamu Salah !</h3>
                                     <p class="mb-4">Jawaban yang benar: <b>{{ findCorrectAnswer(pages[currentState].answers).option }}</b></p>
@@ -81,8 +81,8 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="fixed w-full bottom-0 p-6 left-0">
-                            <button @click="nextContent()" class="btn mt-3 w-full rounded-xl shadow-[0px_2px_0px_3px]"
+                        <div class="fixed bg-base-100 w-full bottom-0 p-6 left-0">
+                            <button @click="nextContent()" class="btn w-full rounded-xl shadow-[0px_2px_0px_3px]"
                             :class="{'btn shadow-gray-500': selectedOption === null, 'btn-primary shadow-indigo-800': selectedOption !== null}">
                                 {{ progressBar == 100 ? "Selesaikan" : "Selanjutnya" }}
                             </button>
@@ -264,10 +264,13 @@ export default defineComponent({
             if(modal_false.checked) {
                 modal_false.checked = !modal_false.checked
             }
-            if(this.selectedOption) {
+            if(this.selectedOption != null) {
                 const step: number = 100 / (this.pages.length)
                 const selectedAnswer = this.pages[this.currentState].answers[this.selectedOption]
+                console.log(selectedAnswer)
                 if(selectedAnswer.is_true) {
+                    console.log("Selected")
+                    console.log(selectedAnswer)
                     document.getElementById("modal-true")?.click()
                     const audio = new Audio('/sound/correct.mp3')
                     audio.play()

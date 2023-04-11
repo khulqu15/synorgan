@@ -1,7 +1,7 @@
 <template>
     <app-layout>
         <template v-slot:content>
-            <div class="min-h-screen bg-neutral-focus">
+            <div class="min-h-screen bg-base-300">
                 <div class="bg-primary w-full h-36 mt-16 pt-6 px-6 rouded-2xl text-white rounded-br-2xl rounded-bl-2xl">
                     <div class="flex items-center gap-6">
                         <div class="grow mt-5">
@@ -15,8 +15,10 @@
                         </div>
                     </div>
                 </div>
-                <div :key="`state-${current_state}`" class="grid grid-cols-3 pb-24 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-2 mt-7">
-                    <div v-for="(item, index) in levels" :key="`level-${index}`">
+                <div :key="`state-${current_state}`" class="grid grid-cols-3 pb-24 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-2 background-pattern relative">
+                    <div class="bg-base-100/70 absolute top-0 left-0 w-full h-full"></div>
+                    <div class="bg-gradient-to-b from-base-300 absolute top-0 left-0 w-full h-48"></div>
+                    <div v-for="(item, index) in levels" class="relative" :key="`level-${index}`">
                         <div v-if="item.is_open">
                             <label for="modal-start" @click="selectedLevel = index" class="btn btn-ghost p-0 w-20 my-5 h-20 flex mx-auto items-center justify-items-center text-center rounded-full">
                                 <img :src="`/assets/icons/${item.image}`" alt="Check Success">
@@ -189,5 +191,10 @@ export default defineComponent({
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
+}
+.background-pattern {
+    background-image: url('../../public/assets/background/pattern.jpg');
+    background-attachment: fixed;
+    background-size: cover;
 }
 </style>
