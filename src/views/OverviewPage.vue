@@ -14,7 +14,7 @@
                 </div>
                 <div>
                     <div class="text-center border-b-2 text-base-content border-base-300 pb-8">
-                        <img src="/assets/readingbook.svg" alt="reading book" class="w-1/2 mx-auto">
+                        <img src="/assets/readingbook.png" alt="reading book" class="w-1/2 mx-auto">
                         <h2 class="font-bold m-0">Sekolah Dasar</h2>
                         <p class="text-sm mt-2 leading-none">Belajar organ dalam manusia dan jawab kuis dokter Sio!</p>
                     </div>
@@ -81,7 +81,7 @@ export default defineComponent({
                 { name: 'Faring', image: 'faring.png', description: 'Mempelajari faring mulai dari definisi dan fungsi. dan terdapat kuis menarik mengenai hidung.' },
                 { name: 'Laring', image: 'laring.png', description: 'Memplajari dan mengerjakan persoalan menantang mengenaii organ penafasan laring' },
                 { name: 'Trakea', image: 'trakea.png', description: 'Mempelajari fungsi, bagian bagian dari trakea. dan terdapat kuis menarik mengenai trakea.' },
-                { name: 'Brongkus', image: 'brongkus.png', description: 'Mempelajari definisi dan fungsi dari brongkus. dan terdapat kuis menarik pada materi ini.' },
+                { name: 'Bronkus', image: 'brongkus.png', description: 'Mempelajari definisi dan fungsi dari bronkus. dan terdapat kuis menarik pada materi ini.' },
                 { name: 'Bronkiolus', image: 'bronkiolus.png', description: 'Mempelajari segala hal mengenai brongkiolus secara efektif dan menyenangkan' },
             ],
             user: {

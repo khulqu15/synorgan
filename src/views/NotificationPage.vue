@@ -8,7 +8,7 @@
                     </div>
                 </div>
                 <div class="pt-20 text-base-content text-center mx-auto w-3/4">
-                    <img src="/assets/notif.svg" class="w-full mx-auto" alt="No Gift">
+                    <img src="/assets/notif.png" class="w-1/2 mx-auto" alt="No Gift">
                     <h4 class="font-bold">Hmmm.. Sepertinya kamu tidak notifikasi</h4>
                     <p>Nanti akan dikabari kalau ada notifikasi</p>
                     <button @click="$router.push({name: 'DashboardPage'})" class="btn mt-6 btn-primary w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-violet-900">Lanjut belajar</button>
