@@ -29,7 +29,7 @@ export default defineComponent({
   mounted() {
     document.addEventListener('click', this.playMusic)
   },
-   beforeUnmount() {
+  beforeUnmount() {
     document.removeEventListener('click', this.playMusic)
   },
   setup() {

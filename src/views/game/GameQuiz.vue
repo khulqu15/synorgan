@@ -296,8 +296,10 @@ export default defineComponent({
         nextContent() {
             this.click_iteration += 1
             this.answerSelection()
+            console.log('CurrentState:' + this.currentState)
+            console.log('Pages Length:' + (this.pages.length - 2))
             if(this.selectedOption != null) {
-                if(this.progressBar >= 100) {
+                if(this.currentState >= (this.pages.length - 1)) {
                     this.user.condition.gems = this.currentScore
                     this.user.condition.lives = this.currentLives
                     let currentState: number = parseInt(localStorage.getItem("current_state") as string)

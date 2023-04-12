@@ -20,16 +20,31 @@
                     <div class="bg-gradient-to-b from-base-300 absolute top-0 left-0 w-full h-48"></div>
                     <div v-for="(item, index) in levels" class="relative" :key="`level-${index}`">
                         <div v-if="item.is_open">
-                            <label for="modal-start" @click="selectedLevel = index" class="btn btn-ghost p-0 w-20 my-5 h-20 flex mx-auto items-center justify-items-center text-center rounded-full">
+                            <label :for="item.type == 'reward' ? 'modal-reward' : 'modal-start'" @click="selectedLevel = index" class="btn btn-ghost p-0 w-20 my-5 h-20 flex mx-auto items-center justify-items-center text-center rounded-full">
                                 <img :src="`/assets/icons/${item.image}`" alt="Check Success">
                             </label>
                         </div>
                         <div v-else>
-                            <label for="modal-danger" class="btn btn-ghost p-0 w-20 my-5 h-20 flex mx-auto items-center justify-items-center text-center rounded-full">
+                            <label :for="item.type == 'reward' ? 'modal-reward' : 'modal-danger'" class="btn btn-ghost p-0 w-20 my-5 h-20 flex mx-auto items-center justify-items-center text-center rounded-full">
                                 <img :src="`/assets/icons/${item.image}`" alt="Check Success">
                             </label>
                         </div>
                     </div>
+                    <input type="checkbox" id="modal-reward" class="modal-toggle" />
+                    <label v-if="levels[selectedLevel]" for="modal-reward" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
+                        <label class="modal-box relative bg-primary" for="">
+                            <div class="text-white">
+                                <h3 class="text-lg font-bold">{{ levels[selectedLevel].name }}</h3>
+                                <p class="mb-4">{{ levels[selectedLevel].description }}</p>
+                            </div>
+                            <button @click="readyToStudy(levels[selectedLevel])" for="modal-reward" class="btn mt-3 bg-gray-200 text-gray-600 w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-gray-400">
+                                Ayo Mulai
+                            </button>
+                            <label for="modal-reward" class="btn mt-3 bg-primary w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-indigo-800">
+                                Tidak jadi
+                            </label>
+                        </label>
+                    </label>
                     <div v-if="user.condition.lives > 0">
                         <input type="checkbox" id="modal-start" class="modal-toggle" />
                         <label v-if="levels[selectedLevel]" for="modal-start" class="modal modal-bottom z-50 sm:modal-middle cursor-pointer">
