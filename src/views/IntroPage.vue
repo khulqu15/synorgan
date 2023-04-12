@@ -15,7 +15,7 @@
                 <div class="p-4" :class="{'w-3/4': intro < 3, 'w-full': intro >= 3}">
                     <div :class="{'opacity-0 invisible h-0 hidden': intro !== 1, 'opacity-1 visible': intro === 1}" class="transition-all">
                         <div class="tooltip tooltip-open tooltip-top tooltip-primary" data-tip="Hai, Aku dokter Sio !">
-                            <img src="assets/sio.svg" alt="sio" class="w-full">
+                            <img src="assets/sio.png" alt="sio" class="w-full">
                         </div>
                         <div class="fixed bottom-0 left-0 p-6 w-full">
                             <button @click="intro += 1" class="btn btn-primary w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-indigo-800">Lanjutkan</button>
@@ -23,7 +23,7 @@
                     </div>
                     <div :class="{'opacity-0 invisible h-0 hidden': intro !== 2, 'opacity-1 visible': intro === 2}" class="transition-all">
                         <div class="tooltip tooltip-open tooltip-top tooltip-primary" data-tip="Ayo mulai belajarnya !">
-                            <img src="assets/sio smart.svg" alt="sio" class="w-full">
+                            <img src="assets/sio_smart.png" alt="sio" class="w-full">
                         </div>
                         <div class="fixed bottom-0 left-0 p-6 w-full">
                             <button @click="intro += 1" class="btn btn-primary w-full rounded-xl shadow-[0px_2px_0px_3px] shadow-indigo-800">Lanjutkan</button>
@@ -31,7 +31,7 @@
                     </div>
                     <div :class="{'opacity-0 invisible h-0 hidden': intro !== 3, 'opacity-1 visible': intro === 3}" class="transition-all">
                         <div class="tooltip tooltip-open w-3/4 mx-auto tooltip-top tooltip-primary" data-tip="Nama kamu siapa ?">
-                            <img src="assets/sio face.svg" alt="sio" class="w-3/4 mx-auto">
+                            <img src="assets/sio_face.png" alt="sio" class="w-3/4 mx-auto">
                         </div>
                         <div class="relative w-full">
                             <div class="absolute w-full bg-base-200 h-144 -top-4 p-8 text-left rounded-2xl left-0">
@@ -49,7 +49,7 @@
                     <div :class="{'opacity-0 invisible h-0 hidden': intro !== 4, 'opacity-1 visible': intro === 4}" class="transition-all">
                         <div class="text-left">
                             <div class="tooltip tooltip-open w-1/2 mx-auto tooltip-right tooltip-primary" :data-tip="`Hai ${user.name}, kamu kelas berapa ?`">
-                                <img src="assets/sio face.svg" alt="sio" class="w-3/4 mx-auto">
+                                <img src="assets/sio_face.png" alt="sio" class="w-3/4 mx-auto">
                             </div>  
                         </div>
                         <div class="relative w-full mb-24">

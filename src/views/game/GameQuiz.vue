@@ -22,13 +22,13 @@
                 </div>
                 <div class="min-h-screen w-full p-6 grid grid-cols-1 py-24 justify-start">
                     <div v-if="welcome" class="text-center w-3/4 mx-auto py-12 space-y-4">
-                        <img src="/assets/starting.svg" class="w-full" alt="Starting">
+                        <img src="/assets/starting.png" class="w-full" alt="Starting">
                         <h2 class="text-primary font-bold">Selamat memulai quiz, semangat ya!</h2>
                         <p class="text-base-content">Jangan takut untuk salah, yang terpenting adalah semangat dan belajar dari kesalahan.</p>
                         <RadialProgress :totalTime="radialProgress.time" :message="radialProgress.message" />
                     </div>
                     <div v-if="closing" class="text-center w-3/4 mx-auto py-12 space-y-4">
-                        <img :src="`/assets/${result.image}`" class="w-full" alt="Starting">
+                        <img :src="`/assets/${result.image}`" class="w-6/12 mx-auto" alt="Starting">
                         <h2 class="text-primary font-bold">{{ result.title }}</h2>
                         <p class="text-base-content">{{ result.description }}</p>
                         <div class="fixed w-full bottom-0 p-6 left-0">
@@ -340,13 +340,13 @@ export default defineComponent({
             console.log(this.progressBar)
             if(this.progressBar >= 100 || this.currentState >= (this.pages.length - 1)) {
                 if(this.progressBar >= 100) {
-                    this.result.image = 'winner.svg'
+                    this.result.image = 'win.png'
                     this.result.title = 'Keren, Selamat yaa..'
                     this.result.description = 'kamu telah berhasil menyelesaikan quiz ini dengan cepat dan benar. Terus jaga semangat belajarmu ya!'
                     const audio = new Audio('/sound/win.mp3')
                     audio.play()
                 } else if(this.progressBar < 100) {
-                    this.result.image = 'lose.svg'
+                    this.result.image = 'lose.png'
                     this.result.title = 'Yahh, Kamu gagal yaa..'
                     this.result.description = 'Tetap semangat dan jangan mudah menyerah meskipun belum berhasil, terus berusaha!'
                     const audio = new Audio('/sound/gameover.mp3')

@@ -4,7 +4,7 @@
       <ion-router-outlet :transition="'my-transition'"></ion-router-outlet>
       <div class="min-h-screen w-full grid grid-cols-1 jusity-center text-center content-center bg-primary">
         <div class="w-1/2 mx-auto" v-show="showSplash">
-          <img id="image_splashscreen" src="assets/splashscreen.svg" class="image-splashscreen" alt="">
+          <img id="image_splashscreen" src="assets/splashscreen.png" class="image-splashscreen" alt="">
         </div>
       </div>
     </ion-content>
