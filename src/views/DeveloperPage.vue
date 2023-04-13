@@ -7,7 +7,7 @@
                         <h5 class="text-base-content font-bold">Pengembang</h5>
                     </div>
                 </div>
-                <div class="p-6 border-b-2 border-base-300">
+                <!-- <div class="p-6 border-b-2 border-base-300">
                     <h2 class="font-bold text-primary">Konten Writer</h2>
                     <div class="bg-base-200 text-base-content rounded-xl p-4">
                         <div class="flex justify-start mb-4 gap-4 items-center">
@@ -27,9 +27,9 @@
                             <h6 class="m-0"><span class="font-bold">Universitas Negeri Surabaya</span> <br> <span class="text-sm">Pendidikan Guru Sekolah Dasar</span></h6>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="p-6 space-y-5 pb-24">
-                    <!-- <h2 class="font-bold text-primary">Orbbit Team</h2>
+                    <h2 class="font-bold text-primary">Orbbit Team</h2>
                      <div class="bg-white rounded-xl p-4">
                         <div class="flex justify-start mb-4 gap-4 items-center">
                             <div>
@@ -83,7 +83,7 @@
                         <div class="bg-primary px-4 py-3 w-full text-white text-white rounded-xl">
                             <h6 class="m-0"><span class="font-bold">Universitas Negeri Surabaya</span> <br> <span class="text-sm">Teknologi Pendidikan</span></h6>
                         </div>
-                    </div> -->
+                    </div>
                     <div class="text-center grid grid-cols-1 justify-items-center justify-center">
                         <div>
                             <img src="/assets/developer/logo_dev.png" alt="Orbbit Logo" class="w-16 mx-auto">
