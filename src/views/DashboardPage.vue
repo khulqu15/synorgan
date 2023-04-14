@@ -149,11 +149,21 @@ export default defineComponent({
             this.levels = JSON.parse(gameState)
             this.current_state = parseInt(currentState as string)
         }
+        const isTutorial = localStorage.getItem("is_tutorial")
+        if(!isTutorial) {
+            this.is_tutorial = true
+            localStorage.setItem("is_tutorial", "1")
+            setTimeout(() => {
+                this.$router.push({name: 'TutorialPage'})
+            }, 500)
+        }
+        else this.is_tutorial = true
         console.log(this.current_state)
     }
   },
   data() {
     return {
+      is_tutorial: false,
       current_state: 0,
       user: {
 

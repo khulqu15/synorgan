@@ -13,6 +13,7 @@ import GameTheory from '../views/game/GameTheory.vue'
 import GameQuiz from '../views/game/GameQuiz.vue'
 import GameReward from '../views/game/GameReward.vue'
 import GiftPage from '../views/GiftPage.vue'
+import TutorialPage from '../views/TutorialPage.vue'
 import NotificationPage from '../views/NotificationPage.vue'
 
 const routes: Array<RouteRecordRaw> = [
@@ -55,6 +56,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/gifts',
     name: 'GiftPage',
     component: GiftPage
+  },
+  {
+    path: '/tutorial',
+    name: 'TutorialPage',
+    component: TutorialPage
   },
   {
     path: '/user-profile',

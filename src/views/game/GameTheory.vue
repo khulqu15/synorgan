@@ -22,7 +22,7 @@
             <div class="min-h-screen w-full p-6 grid bg-base-100 grid-cols-1 py-24 justify-start">
                 <div class="content" v-if="pages.length > 0">
                     <div class="flex items-center gap-x-2 mb-4">
-                        <img :src="`/assets/icons/${dataGame.icon}`" class="w-8" :alt="dataGame.icon">
+                        <img :src="`/assets/icons/${dataGame.icon}`" v-if="dataGame.icon" class="w-8" :alt="dataGame.icon">
                         <h5 class="m-0 font-semibold text-primary" v-if="dataGame.name">{{ dataGame.name }}</h5>
                     </div>
                     <div class="w-full rounded-xl mb-8 overflow-hidden p-0">
