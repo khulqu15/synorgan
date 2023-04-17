@@ -340,7 +340,7 @@ export default defineComponent({
             console.log(this.progressBar)
             if(this.progressBar >= 100 || this.currentState >= (this.pages.length - 1)) {
                 if(this.progressBar >= 100) {
-                    this.result.image = 'win.png'
+                    this.result.image = 'win.gif'
                     this.result.title = 'Keren, Selamat yaa..'
                     this.result.description = 'kamu telah berhasil menyelesaikan quiz ini dengan cepat dan benar. Terus jaga semangat belajarmu ya!'
                     const audio = new Audio('/sound/win.mp3')

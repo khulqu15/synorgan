@@ -9,7 +9,7 @@
                     </div>
                     <div class="text-center pt-8 space-y-4">
                         <h4 class="font-bold">Horeee.. Selamat kamu dapat hadiah dari dokter SiO</h4>
-                        <img src="/assets/gift.png" alt="Gift" class="w-3/4 mx-auto">
+                        <img src="/assets/win.gif" alt="Gift" class="w-3/4 mx-auto">
                         <p>Tetap konsisten dan semangat belajar agar kamu bertambah pintar</p>
                     </div>
                     <div class="p-3 relative bg-base-200 rounded-xl border-2 border-base-300 mt-7">
