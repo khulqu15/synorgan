@@ -1,7 +1,7 @@
 <template>
     <ion-page>
         <ion-content>
-            <div class="min-h-screen bg-base-100 text-base-content w-full p-6 grid grid-cols-1 pt-12 justify-start">
+            <div class="min-h-screen bg-base-100 text-base-content w-full p-6 grid grid-cols-1 pt-12 pb-24 justify-start">
                 <div class="content">
                     <div class="flex items-center gap-x-2 mb-4">
                         <img :src="`/assets/icons/${dataGame.icon}`" class="w-8" :alt="dataGame.icon">
@@ -112,6 +112,8 @@ export default defineComponent({
                 this.reward.name = this.dataGame.name
                 this.reward.image = this.dataGame.image
                 this.reward.icon = this.dataGame.icon
+                this.reward.lives = parseInt(localStorage.getItem("current_score_quiz")||"0")
+                this.reward.gems = Math.floor(parseInt(localStorage.getItem("current_progress_quiz")||"0")/20)
             } catch(error) {
                 console.log("Error loading data: ", error)
             }

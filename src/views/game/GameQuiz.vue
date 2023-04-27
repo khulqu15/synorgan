@@ -338,6 +338,8 @@ export default defineComponent({
             else document.getElementById("modal-false")?.click()
             this.selectedOption = null
             console.log(this.progressBar)
+            localStorage.setItem("current_score_quiz", this.currentScore.toString())
+            localStorage.setItem("current_progress_quiz", this.progressBar.toString())    
             if(this.progressBar >= 100 || this.currentState >= (this.pages.length - 1)) {
                 if(this.progressBar >= 100) {
                     this.result.image = 'win.gif'
