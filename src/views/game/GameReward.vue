@@ -85,6 +85,19 @@ export default defineComponent({
             const audio = new Audio('/sound/win.mp3')
             audio.play()
         }, 200);
+        const currentState: number = parseInt(localStorage.getItem("current_state") as string)
+        const gameState: Game[] = JSON.parse(localStorage.getItem("game_state") as string)
+        const defaultGameState: Game = {
+            name: "",
+            type: "",
+            image: "",
+            description: "",
+            is_open: false,
+            is_done: false,
+            id: -1
+        };
+        const currentGameStateIndex = gameState.findIndex(game => game.id === this.dataGame.id && game.type === this.dataGame.type && game.name === this.dataGame.name) ?? 0
+        console.log(currentGameStateIndex + 1)
     },
     created() {
         const store = useStore()
@@ -102,18 +115,34 @@ export default defineComponent({
     methods: {
         async loadJsonData(caseName: string) {
             try {
-                const response = await fetch(`/data/${caseName}/reward.json`)
-                if(!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`)
+                const currentState: number = parseInt(localStorage.getItem("current_state") as string)
+                const gameState: Game[] = JSON.parse(localStorage.getItem("game_state") as string)
+                const defaultGameState: Game = {
+                    name: "",
+                    type: "",
+                    image: "",
+                    description: "",
+                    is_open: false,
+                    is_done: false,
+                    id: -1
+                };
+                const currentGameState = gameState.find(game => game.id === this.dataGame.id && game.type === this.dataGame.type && game.name === this.dataGame.name) ?? defaultGameState
+                const currentGameStateIndex = gameState.findIndex(game => game.id === this.dataGame.id && game.type === this.dataGame.type && game.name === this.dataGame.name) ?? 0
+            
+                if((currentGameStateIndex + 1) < 27) {
+                    const response = await fetch(`/data/${caseName}/reward.json`)
+                    if(!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`)
+                    }
+                    const jsonData = await response.json()
+                    this.reward.gems = jsonData.reward.gems
+                    this.reward.lives = jsonData.reward.lives
+                    this.reward.name = this.dataGame.name
+                    this.reward.image = this.dataGame.image
+                    this.reward.icon = this.dataGame.icon
+                    this.reward.lives = parseInt(localStorage.getItem("current_score_quiz")||"0")
+                    this.reward.gems = Math.floor(parseInt(localStorage.getItem("current_progress_quiz")||"0")/20)
                 }
-                const jsonData = await response.json()
-                this.reward.gems = jsonData.reward.gems
-                this.reward.lives = jsonData.reward.lives
-                this.reward.name = this.dataGame.name
-                this.reward.image = this.dataGame.image
-                this.reward.icon = this.dataGame.icon
-                this.reward.lives = parseInt(localStorage.getItem("current_score_quiz")||"0")
-                this.reward.gems = Math.floor(parseInt(localStorage.getItem("current_progress_quiz")||"0")/20)
             } catch(error) {
                 console.log("Error loading data: ", error)
             }
@@ -136,13 +165,11 @@ export default defineComponent({
                 if(gameState[currentGameStateIndex].type == "quiz") gameState[currentGameStateIndex].image = "check_success.png"
                 if(gameState[currentGameStateIndex].type == "theory") gameState[currentGameStateIndex].image = "theory_success.png"
                 if(gameState[currentGameStateIndex].type == "reward") gameState[currentGameStateIndex].image = "reward_success.png"
-                gameState[(currentGameStateIndex + 1)].is_open = true
-                if(gameState[(currentGameStateIndex+1)].type == "quiz") gameState[currentGameStateIndex+1].image = "lock_current.png"
-                if(gameState[(currentGameStateIndex+1)].type == "theory") gameState[currentGameStateIndex+1].image = "theory_current.png"
-                if(gameState[(currentGameStateIndex+1)].type == "reward") gameState[currentGameStateIndex+1].image = "reward_current.png"    
-                this.currentState = currentState + 1
                 localStorage.setItem("current_state", this.currentState.toString())
-                gameState[currentGameStateIndex].is_done = true
+                if((currentGameStateIndex + 1) < 27) {
+                    gameState[(currentGameStateIndex + 1)].is_open = true
+                    gameState[currentGameStateIndex].is_done = true
+                }
                 // this.user.condition.gems += this.reward.gems
                 // this.user.condition.lives += this.reward.lives
                 const gameGift = JSON.parse(localStorage.getItem("game_gift") as string)

@@ -26,9 +26,10 @@
                         <h5 class="m-0 font-semibold text-primary" v-if="dataGame.name">{{ dataGame.name }}</h5>
                     </div>
                     <div class="w-full rounded-xl mb-8 overflow-hidden p-0">
-                        <img :src="`/assets/content/${pages[currentState].image}`" class="h-full h-full object-cover object-center" alt="">                        
+                        <img v-if="pages[currentState].image" :src="`/assets/content/${pages[currentState].image}`" class="h-full h-full object-cover object-center" alt="">                        
                     </div>
-                    <div class="w-full p-5 pt-10 rounde-xl bg-base-200 text-base-content border-2 border-base-300 rounded-xl relative">
+                    <div :class="{'pt-20': pages[currentState].image === undefined || pages[currentState].image === null, 'pt-10': pages[currentState].image !== undefined && pages[currentState].image !== null}" 
+                    class="w-full p-5 rounde-xl bg-base-200 text-base-content border-2 border-base-300 rounded-xl relative">
                         <div class="inline-block bg-primary px-4 py-2 rounded-xl absolute -top-5 left-0">
                             <h4 class="font-bold text-white m-0">{{ pages[currentState].title }}</h4>
                         </div>
@@ -158,7 +159,7 @@ export default defineComponent({
                 const gameState: Game[] = JSON.parse(localStorage.getItem("game_state") as string)
                 const currentGameState = gameState.find(game => game.id === this.dataGame.id && game.type === this.dataGame.type && game.name === this.dataGame.name) ?? defaultGameState
                 const currentGameStateIndex = gameState.findIndex(game => game.id === this.dataGame.id && game.type === this.dataGame.type && game.name === this.dataGame.name) ?? 0
-                if(!currentGameState.is_done) {
+                if(!currentGameState.is_done && this.progressBar <= 100) {
                     if(gameState[currentGameStateIndex].type == "quiz") gameState[currentGameStateIndex].image = "check_success.png"
                     if(gameState[currentGameStateIndex].type == "theory") gameState[currentGameStateIndex].image = "theory_success.png"
                     if(gameState[currentGameStateIndex].type == "reward") gameState[currentGameStateIndex].image = "reward_success.png"

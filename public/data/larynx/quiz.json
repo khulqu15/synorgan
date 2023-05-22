@@ -1,6 +1,6 @@
 [
     {
-        "image": "pharynk3.png",
+        "image": "larynx1.png",
         "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Jumlah susunan tulang rawan pada laring ada...</h6></div>",
         "answers": [
             {
@@ -22,7 +22,7 @@
         ]
     },
     {
-        "image": "pharynk4.png",
+        "image": "larynx2.png",
         "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Pada laring terdapat katup yang berfungsi mengatur jalannya makanan dan udara. Katup ini disbut...</h6></div>",
         "answers": [
             {
@@ -44,7 +44,7 @@
         ]
     },
     {
-        "image": "pharynk5.png",
+        "image": "larynx3.gif",
         "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Pita suara pada laring menghasilkan...</h6></div>",
         "answers": [
             {
@@ -66,7 +66,7 @@
         ]
     },
     {
-        "image": "pharynk5.png",
+        "image": "larynx4.png",
         "title": "<div class='inline-block text-grey-700 py-2 rounded-xl relative pt-6 -top-5 left-0'><h6 class='font-bold m-0'>Laring ini terletak pada bagian ... faring</h6></div>",
         "answers": [
             {
